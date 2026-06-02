@@ -1,7 +1,9 @@
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
+import { getDictionary } from "../lib/dictionary";
 
-export default function Home() {
+export default async function Home() {
+  const { t } = await getDictionary();
   return (
     <>
       <Header />
@@ -17,17 +19,17 @@ export default function Home() {
               <div className="md:col-span-7 lg:col-span-7">
                 <div className="inline-flex items-center gap-2 rounded-full border border-orange-400/30 bg-orange-400/10 px-3 py-1 text-xs font-medium text-orange-300 mb-6">
                   <span className="h-1.5 w-1.5 rounded-full bg-orange-400 animate-pulse"></span>
-                  Cập nhật 2026 · 29+ sàn forex được tuyển chọn
+                  {t("home.hero.badge")}
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-white">
-                  Tra cứu, so sánh
-                  <span className="block bg-gradient-to-r from-orange-300 via-amber-400 to-amber-500 bg-clip-text text-transparent">sàn forex uy tín</span>
-                  <span className="block text-zinc-300 text-3xl md:text-4xl lg:text-5xl mt-2">cùng cơ chế IB tốt nhất</span>
+                  {t("home.hero.title_part1")}
+                  <span className="block bg-gradient-to-r from-orange-300 via-amber-400 to-amber-500 bg-clip-text text-transparent"> {t("home.hero.title_part2")}</span>
+                  <span className="block text-zinc-300 text-3xl md:text-4xl lg:text-5xl mt-2">{t("home.hero.title_part3")}</span>
                 </h1>
 
                 <p className="mt-6 max-w-xl text-zinc-400 text-lg leading-relaxed">
-                  HieuNTHUB tổng hợp đánh giá độc lập, hoa hồng IB minh bạch và rebate trực tiếp — giúp trader Việt chọn sàn an toàn, IB chọn cơ chế hợp lý.
+                  {t("home.hero.desc")}
                 </p>
 
                 <form className="mt-8 flex flex-col sm:flex-row gap-3 max-w-2xl" method="GET" action="/brokers">
@@ -35,41 +37,41 @@ export default function Home() {
                     <svg className="h-5 w-5 text-zinc-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg>
-                    <input type="text" name="q" placeholder="Tìm FPG, Mitrade, Exness..." autoComplete="off" className="flex-1 bg-transparent placeholder:text-zinc-500 outline-none text-zinc-100" />
+                    <input type="text" name="q" placeholder={t("home.hero.search_placeholder")} autoComplete="off" className="flex-1 bg-transparent placeholder:text-zinc-500 outline-none text-zinc-100" />
                   </div>
                   <button type="submit" className="rounded-2xl bg-gradient-to-r from-orange-400 to-amber-600 px-8 py-4 font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-xl shadow-orange-500/30 whitespace-nowrap">
-                    Tìm sàn ngay →
+                    {t("home.hero.search_btn")}
                   </button>
                 </form>
 
                 <div className="mt-6 flex flex-wrap gap-2">
-                  <span className="text-xs text-zinc-500 self-center mr-1">Tìm nhanh:</span>
+                  <span className="text-xs text-zinc-500 self-center mr-1">{t("home.hero.quick_search")}</span>
                   <a href="/brokers?sort=spread" className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs text-zinc-300 hover:border-orange-400/40 hover:text-orange-300 transition">
-                    ⚡ Spread thấp
+                    {t("home.hero.tag.spread")}
                   </a>
                   <a href="/brokers?rebate=1" className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs text-zinc-300 hover:border-orange-400/40 hover:text-orange-300 transition">
-                    💰 Rebate cao
+                    {t("home.hero.tag.rebate")}
                   </a>
                   <a href="/brokers?cpa=1" className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs text-zinc-300 hover:border-orange-400/40 hover:text-orange-300 transition">
-                    🚀 CPA Lifetime
+                    {t("home.hero.tag.cpa")}
                   </a>
                   <a href="/brokers?fast_withdrawal=1" className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs text-zinc-300 hover:border-orange-400/40 hover:text-orange-300 transition">
-                    ⚡ Rút tiền nhanh
+                    {t("home.hero.tag.withdrawal")}
                   </a>
                   <a href="/brokers?regulated=1" className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs text-zinc-300 hover:border-orange-400/40 hover:text-orange-300 transition">
-                    🛡️ Có giấy phép
+                    {t("home.hero.tag.regulated")}
                   </a>
                 </div>
 
                 <div className="mt-10 flex items-center gap-8 text-sm">
                   <div>
                     <div className="text-2xl font-bold text-white">29+</div>
-                    <div className="text-zinc-500 text-xs">Sàn được review</div>
+                    <div className="text-zinc-500 text-xs">{t("home.hero.stat.brokers")}</div>
                   </div>
                   <div className="h-10 w-px bg-white/10"></div>
                   <div>
                     <div className="text-2xl font-bold text-white">10K+</div>
-                    <div className="text-zinc-500 text-xs">Trader theo dõi</div>
+                    <div className="text-zinc-500 text-xs">{t("home.hero.stat.traders")}</div>
                   </div>
                   <div className="h-10 w-px bg-white/10"></div>
                   <div>
@@ -77,9 +79,9 @@ export default function Home() {
                       <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"></path>
                       </svg>
-                      Audit
+                      {t("home.hero.stat.audit")}
                     </div>
-                    <div className="text-zinc-500 text-xs">Độc lập, không sponsor</div>
+                    <div className="text-zinc-500 text-xs">{t("home.hero.stat.audit_desc")}</div>
                   </div>
                 </div>
               </div>
@@ -98,11 +100,11 @@ export default function Home() {
                   </div>
                   <div className="grid grid-cols-2 gap-2 text-xs">
                     <div className="rounded-lg bg-white/5 px-2 py-1.5">
-                      <div className="text-zinc-500">Năm thành lập</div>
+                      <div className="text-zinc-500">{t("home.broker.founded")}</div>
                       <div className="font-semibold text-white">2015</div>
                     </div>
                     <div className="rounded-lg bg-emerald-500/10 px-2 py-1.5">
-                      <div className="text-emerald-300">Rebate</div>
+                      <div className="text-emerald-300">{t("home.broker.rebate")}</div>
                       <div className="font-semibold text-white">✓</div>
                     </div>
                   </div>
@@ -121,11 +123,11 @@ export default function Home() {
                   </div>
                   <div className="grid grid-cols-2 gap-2 text-xs">
                     <div className="rounded-lg bg-white/5 px-2 py-1.5">
-                      <div className="text-zinc-500">Năm thành lập</div>
+                      <div className="text-zinc-500">{t("home.broker.founded")}</div>
                       <div className="font-semibold text-white">2021</div>
                     </div>
                     <div className="rounded-lg bg-emerald-500/10 px-2 py-1.5">
-                      <div className="text-emerald-300">Rebate</div>
+                      <div className="text-emerald-300">{t("home.broker.rebate")}</div>
                       <div className="font-semibold text-white">✓</div>
                     </div>
                   </div>
@@ -144,11 +146,11 @@ export default function Home() {
                   </div>
                   <div className="grid grid-cols-2 gap-2 text-xs">
                     <div className="rounded-lg bg-white/5 px-2 py-1.5">
-                      <div className="text-zinc-500">Năm thành lập</div>
+                      <div className="text-zinc-500">{t("home.broker.founded")}</div>
                       <div className="font-semibold text-white">2012</div>
                     </div>
                     <div className="rounded-lg bg-emerald-500/10 px-2 py-1.5">
-                      <div className="text-emerald-300">Rebate</div>
+                      <div className="text-emerald-300">{t("home.broker.rebate")}</div>
                       <div className="font-semibold text-white">✓</div>
                     </div>
                   </div>
@@ -170,11 +172,11 @@ export default function Home() {
                   </div>
                   <div className="grid grid-cols-2 gap-2 text-xs">
                     <div className="rounded-lg bg-white/5 px-2 py-1.5">
-                      <div className="text-zinc-500">Năm thành lập</div>
+                      <div className="text-zinc-500">{t("home.broker.founded")}</div>
                       <div className="font-semibold text-white">2015</div>
                     </div>
                     <div className="rounded-lg bg-emerald-500/10 px-2 py-1.5">
-                      <div className="text-emerald-300">Rebate</div>
+                      <div className="text-emerald-300">{t("home.broker.rebate")}</div>
                       <div className="font-semibold text-white">✓</div>
                     </div>
                   </div>
@@ -193,11 +195,11 @@ export default function Home() {
                   </div>
                   <div className="grid grid-cols-2 gap-2 text-xs">
                     <div className="rounded-lg bg-white/5 px-2 py-1.5">
-                      <div className="text-zinc-500">Năm thành lập</div>
+                      <div className="text-zinc-500">{t("home.broker.founded")}</div>
                       <div className="font-semibold text-white">2021</div>
                     </div>
                     <div className="rounded-lg bg-emerald-500/10 px-2 py-1.5">
-                      <div className="text-emerald-300">Rebate</div>
+                      <div className="text-emerald-300">{t("home.broker.rebate")}</div>
                       <div className="font-semibold text-white">✓</div>
                     </div>
                   </div>
@@ -216,11 +218,11 @@ export default function Home() {
                   </div>
                   <div className="grid grid-cols-2 gap-2 text-xs">
                     <div className="rounded-lg bg-white/5 px-2 py-1.5">
-                      <div className="text-zinc-500">Năm thành lập</div>
+                      <div className="text-zinc-500">{t("home.broker.founded")}</div>
                       <div className="font-semibold text-white">2012</div>
                     </div>
                     <div className="rounded-lg bg-emerald-500/10 px-2 py-1.5">
-                      <div className="text-emerald-300">Rebate</div>
+                      <div className="text-emerald-300">{t("home.broker.rebate")}</div>
                       <div className="font-semibold text-white">✓</div>
                     </div>
                   </div>
@@ -236,9 +238,9 @@ export default function Home() {
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
                 <span className="h-2 w-2 rounded-full bg-orange-400 animate-pulse"></span>
-                <span className="text-xs font-bold uppercase tracking-wider text-orange-300">Khuyến mãi nóng</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-orange-300">{t("home.promo.hot")}</span>
               </div>
-              <a href="#" className="text-xs text-zinc-400 hover:text-orange-300 transition">Xem tất cả →</a>
+              <a href="#" className="text-xs text-zinc-400 hover:text-orange-300 transition">{t("home.promo.view_all")}</a>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <a href="#" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-blue-500/20 to-indigo-500/5 p-6 hover:border-orange-400/40 hover:shadow-xl hover:shadow-blue-500/10 transition flex flex-col">
@@ -250,11 +252,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-2xl font-extrabold text-white">Welcome Bonus</div>
-                <div className="text-sm text-blue-300 mt-1">VT Markets · Mở tài khoản</div>
+                <div className="text-sm text-blue-300 mt-1">VT Markets · {t("home.promo.open_account")}</div>
                 <div className="mt-auto pt-4 flex items-center justify-between text-xs">
-                  <span className="text-zinc-400">Cho tài khoản mới</span>
+                  <span className="text-zinc-400">{t("home.promo.for_new")}</span>
                   <span className="inline-flex items-center gap-1 text-blue-300 font-bold group-hover:translate-x-0.5 transition">
-                    Nhận ngay →
+                    {t("home.promo.get_now")}
                   </span>
                 </div>
               </a>
@@ -267,11 +269,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-2xl font-extrabold text-white">Welcome Bonus</div>
-                <div className="text-sm text-emerald-300 mt-1">Infinox · Mở tài khoản</div>
+                <div className="text-sm text-emerald-300 mt-1">Infinox · {t("home.promo.open_account")}</div>
                 <div className="mt-auto pt-4 flex items-center justify-between text-xs">
-                  <span className="text-zinc-400">Cho tài khoản mới</span>
+                  <span className="text-zinc-400">{t("home.promo.for_new")}</span>
                   <span className="inline-flex items-center gap-1 text-emerald-300 font-bold group-hover:translate-x-0.5 transition">
-                    Nhận ngay →
+                    {t("home.promo.get_now")}
                   </span>
                 </div>
               </a>
