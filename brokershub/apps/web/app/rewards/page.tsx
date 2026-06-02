@@ -28,8 +28,15 @@ export default function RewardsPage() {
   // Mock User Data
   const currentLots = 45.5;
   const currentLevelIndex = 2; // User has passed Level 2
-  const nextLevel = REWARD_LEVELS[currentLevelIndex + 1];
-  const progressPercent = Math.min(100, (currentLots / nextLevel.lots) * 100);
+  const nextLevel = REWARD_LEVELS[currentLevelIndex + 1] || REWARD_LEVELS[REWARD_LEVELS.length - 1] || {
+    level: 10,
+    title: "Thượng Đỉnh",
+    lots: 10000,
+    reward: "$150,000",
+    color: "from-yellow-300 to-amber-500",
+    icon: "💎"
+  };
+  const progressPercent = nextLevel.lots > 0 ? Math.min(100, (currentLots / nextLevel.lots) * 100) : 100;
 
   useEffect(() => {
     setIsLinked(localStorage.getItem('vtLinked') === 'true');
