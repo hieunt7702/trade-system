@@ -38,8 +38,8 @@ export default function PredictionsPage() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple-500/5 rounded-full blur-[120px] pointer-events-none"></div>
 
           <div className="flex-1 flex items-center justify-center p-4 relative z-10 min-h-[calc(100vh-160px)]">
-            <div className="max-w-md w-full bg-gradient-to-b from-white/[0.06] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-3xl p-8 shadow-2xl shadow-purple-500/10 text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-fuchsia-600 rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg shadow-purple-500/30">
+            <div className="max-w-md w-full bg-gradient-to-b from-white/[0.06] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded p-8 shadow-2xl shadow-purple-500/10 text-center">
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-fuchsia-600 rounded mx-auto mb-6 flex items-center justify-center shadow-lg shadow-purple-500/30">
                 <svg className="w-10 h-10 text-zinc-950" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -53,10 +53,10 @@ export default function PredictionsPage() {
               <button
                 onClick={handleLinkAccount}
                 disabled={isLinking}
-                className="w-full relative group overflow-hidden rounded-xl border border-white/10 p-1 transition-all hover:border-purple-500/50 bg-[#161719]"
+                className="w-full relative group overflow-hidden rounded border border-white/10 p-1 transition-all hover:border-purple-500/50 bg-[#161719]"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/10 to-purple-500/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-                <div className="relative bg-gradient-to-r from-purple-400 to-fuchsia-600 text-zinc-950 font-bold py-3.5 px-6 rounded-lg flex items-center justify-center gap-2 transition-transform active:scale-[0.98]">
+                <div className="relative bg-gradient-to-r from-purple-400 to-fuchsia-600 text-zinc-950 font-bold py-3.5 px-6 rounded flex items-center justify-center gap-2 transition-transform active:scale-[0.98]">
                   {isLinking ? (
                     <>
                       <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-zinc-950" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -101,8 +101,8 @@ export default function PredictionsPage() {
             {/* Top Cards Row */}
             <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
               {/* Participants */}
-              <div className="md:col-span-3 bg-black/40 rounded-2xl border border-white/10 p-5 flex flex-col items-center justify-center text-center shadow-lg">
-                <div className="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center mb-3">
+              <div className="md:col-span-3 bg-black/40 rounded border border-white/10 p-5 flex flex-col items-center justify-center text-center shadow-lg">
+                <div className="w-10 h-10 rounded bg-blue-500/20 text-blue-400 flex items-center justify-center mb-3">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
@@ -113,8 +113,8 @@ export default function PredictionsPage() {
               </div>
 
               {/* Time */}
-              <div className="md:col-span-3 bg-black/40 rounded-2xl border border-white/10 p-5 flex flex-col items-center justify-center text-center shadow-lg">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-3">
+              <div className="md:col-span-3 bg-black/40 rounded border border-white/10 p-5 flex flex-col items-center justify-center text-center shadow-lg">
+                <div className="w-10 h-10 rounded bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-3">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -125,7 +125,7 @@ export default function PredictionsPage() {
               </div>
 
               {/* XAUUSD Banner */}
-              <div className="md:col-span-6 bg-gradient-to-r from-amber-900/40 to-amber-600/20 rounded-2xl border border-amber-500/30 p-6 relative overflow-hidden flex items-center shadow-lg shadow-amber-500/10">
+              <div className="md:col-span-6 bg-gradient-to-r from-amber-900/40 to-amber-600/20 rounded border border-amber-500/30 p-6 relative overflow-hidden flex items-center shadow-lg shadow-amber-500/10">
                 <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-[url('https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-40 mix-blend-luminosity"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#090A0C] via-[#090A0C]/80 to-transparent"></div>
                 
@@ -136,8 +136,8 @@ export default function PredictionsPage() {
               </div>
               
               {/* Available Lots */}
-              <div className="md:col-span-3 bg-black/40 rounded-2xl border border-white/10 p-5 flex flex-col items-center justify-center text-center mt-0 shadow-lg">
-                <div className="w-10 h-10 rounded-xl bg-zinc-500/20 text-zinc-400 flex items-center justify-center mb-3">
+              <div className="md:col-span-3 bg-black/40 rounded border border-white/10 p-5 flex flex-col items-center justify-center text-center mt-0 shadow-lg">
+                <div className="w-10 h-10 rounded bg-zinc-500/20 text-zinc-400 flex items-center justify-center mb-3">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                   </svg>
@@ -148,8 +148,8 @@ export default function PredictionsPage() {
               </div>
 
               {/* Fee Per Try */}
-              <div className="md:col-span-3 bg-black/40 rounded-2xl border border-white/10 p-5 flex flex-col items-center justify-center text-center mt-0 shadow-lg">
-                <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-3">
+              <div className="md:col-span-3 bg-black/40 rounded border border-white/10 p-5 flex flex-col items-center justify-center text-center mt-0 shadow-lg">
+                <div className="w-10 h-10 rounded bg-amber-500/20 text-amber-400 flex items-center justify-center mb-3">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -160,7 +160,7 @@ export default function PredictionsPage() {
               </div>
 
               {/* Join Prediction Form */}
-              <div className="md:col-span-6 bg-[#161719] rounded-2xl border border-purple-500/30 p-6 flex flex-col justify-center shadow-lg">
+              <div className="md:col-span-6 bg-[#161719] rounded border border-purple-500/30 p-6 flex flex-col justify-center shadow-lg">
                 <h3 className="text-lg font-bold text-white mb-2">Tham gia dự đoán</h3>
                 <p className="text-xs text-zinc-400 mb-4 leading-relaxed">
                   Nhập đúng 4 chữ số (0000-9999). Mỗi ngày một lượt (Thứ Hai – Thứ Sáu). Mỗi lượt trừ <strong className="text-white">0.1000 lot</strong> từ Hệ thống thưởng.
@@ -169,9 +169,9 @@ export default function PredictionsPage() {
                   <input 
                     type="text" 
                     placeholder="VD: 0123" 
-                    className="flex-1 bg-black/40 border border-white/10 rounded-xl px-4 py-2.5 text-white placeholder-zinc-600 focus:outline-none focus:border-purple-500/50 transition-colors"
+                    className="flex-1 bg-black/40 border border-white/10 rounded px-4 py-2.5 text-white placeholder-zinc-600 focus:outline-none focus:border-purple-500/50 transition-colors"
                   />
-                  <button className="bg-gradient-to-r from-purple-500 to-fuchsia-600 hover:from-purple-400 hover:to-fuchsia-500 text-white font-semibold px-5 py-2.5 rounded-xl transition flex items-center gap-2 shadow-lg shadow-purple-500/20">
+                  <button className="bg-gradient-to-r from-purple-500 to-fuchsia-600 hover:from-purple-400 hover:to-fuchsia-500 text-white font-semibold px-5 py-2.5 rounded transition flex items-center gap-2 shadow-lg shadow-purple-500/20">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -183,9 +183,9 @@ export default function PredictionsPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               {/* Prize Pool Table */}
-              <div className="lg:col-span-2 bg-black/40 rounded-2xl border border-white/10 overflow-hidden flex flex-col shadow-lg">
+              <div className="lg:col-span-2 bg-black/40 rounded border border-white/10 overflow-hidden flex flex-col shadow-lg">
                 <div className="p-5 border-b border-white/10 flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded bg-amber-500/20 text-amber-400 flex items-center justify-center">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                     </svg>
@@ -266,9 +266,9 @@ export default function PredictionsPage() {
               </div>
 
               {/* Participants Table */}
-              <div className="lg:col-span-1 bg-black/40 rounded-2xl border border-white/10 flex flex-col overflow-hidden shadow-lg">
+              <div className="lg:col-span-1 bg-black/40 rounded border border-white/10 flex flex-col overflow-hidden shadow-lg">
                 <div className="p-5 border-b border-white/10 flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded bg-blue-500/20 text-blue-400 flex items-center justify-center">
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                       </svg>

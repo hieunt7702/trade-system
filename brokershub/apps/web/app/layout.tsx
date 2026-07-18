@@ -24,8 +24,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HieuNTHUB - Tra cứu, so sánh sàn forex uy tín",
-  description: "Tổng hợp đánh giá độc lập, hoa hồng IB minh bạch và rebate trực tiếp — giúp trader Việt chọn sàn an toàn, IB chọn cơ chế hợp lý.",
+  title: "VT Rewards Hub - Quyền lợi giao dịch & cơ chế đối tác VT Markets",
+  description: "VT Rewards Hub là trung tâm tổng hợp quyền lợi dành cho khách hàng và đối tác VT Markets: chương trình thưởng giao dịch, tích lũy lot, ưu đãi khách hàng, hỗ trợ tài khoản, cơ chế IB, rebate và chính sách đối tác minh bạch.",
 };
 
 export default async function RootLayout({
@@ -38,14 +38,14 @@ export default async function RootLayout({
   const initialLanguage = (langCookie === "vi" || langCookie === "en") ? langCookie as "vi" | "en" : "vi";
 
   return (
-    <html lang={initialLanguage} className="dark">
+    <html lang={initialLanguage} className="dark" suppressHydrationWarning>
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className={`${inter.variable} ${hankenGrotesk.variable} ${jetbrainsMono.variable} antialiased min-h-screen flex flex-col font-body-md text-body-md bg-background overflow-x-hidden`}>
+      <body className={`${inter.variable} ${hankenGrotesk.variable} ${jetbrainsMono.variable} antialiased min-h-screen flex flex-col font-body-md text-body-md bg-background overflow-x-hidden`} suppressHydrationWarning>
         <LanguageProvider initialLanguage={initialLanguage}>
           <GlobalDropdownHandler />
           {children}

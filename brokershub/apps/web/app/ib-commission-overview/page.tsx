@@ -128,15 +128,15 @@ export default async function IBCommissionOverviewPage({ searchParams }: { searc
             </p>
 
             <div className="mt-10 grid grid-cols-3 gap-4 max-w-2xl mx-auto">
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+              <div className="rounded border border-white/10 bg-white/[0.03] p-5">
                 <div className="text-3xl md:text-4xl font-extrabold text-orange-300">15</div>
                 <div className="text-xs text-zinc-500 mt-1">Brokers</div>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+              <div className="rounded border border-white/10 bg-white/[0.03] p-5">
                 <div className="text-3xl md:text-4xl font-extrabold text-emerald-300">46</div>
                 <div className="text-xs text-zinc-500 mt-1">Mechanisms</div>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+              <div className="rounded border border-white/10 bg-white/[0.03] p-5">
                 <div className="text-3xl md:text-4xl font-extrabold text-amber-300">4</div>
                 <div className="text-xs text-zinc-500 mt-1">Commission types</div>
               </div>
@@ -148,8 +148,8 @@ export default async function IBCommissionOverviewPage({ searchParams }: { searc
         <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10">
 
           {/* Collapsible Welcome Letter */}
-          <details className="rounded-2xl border border-white/10 bg-white/[0.03] mb-8 group">
-            <summary className="flex items-center justify-between gap-3 cursor-pointer list-none px-5 py-4 hover:bg-white/[0.02] transition rounded-2xl select-none">
+          <details className="rounded border border-white/10 bg-white/[0.03] mb-8 group">
+            <summary className="flex items-center justify-between gap-3 cursor-pointer list-none px-5 py-4 hover:bg-white/[0.02] transition rounded select-none">
               <span className="font-semibold text-white">📩 Thư ngỏ từ HieuNTHUB</span>
               <svg className="h-5 w-5 text-zinc-400 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
@@ -214,7 +214,7 @@ export default async function IBCommissionOverviewPage({ searchParams }: { searc
               </div>
 
               {/* Search Bar */}
-              <div className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 lg:w-80 focus-within:border-orange-400/50 transition">
+              <div className="flex items-center gap-3 rounded border border-white/10 bg-white/5 px-4 py-2.5 lg:w-80 focus-within:border-orange-400/50 transition">
                 <svg className="h-4 w-4 text-zinc-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                 </svg>
@@ -226,13 +226,13 @@ export default async function IBCommissionOverviewPage({ searchParams }: { searc
           {/* Cards Grid */}
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {ibBrokers.map((broker, idx) => (
-              <article key={idx} className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] hover:border-orange-400/40 hover:shadow-lg hover:shadow-orange-500/10 transition p-6 flex flex-col justify-between">
+              <article key={idx} className="rounded border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] hover:border-orange-400/40 hover:shadow-lg hover:shadow-orange-500/10 transition p-6 flex flex-col justify-between">
 
                 {/* head */}
                 <div>
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
-                      <img src={broker.logo} alt={broker.name} className="h-12 w-12 rounded-xl object-cover shrink-0" />
+                      <img src={broker.logo} alt={broker.name} className="h-12 w-12 rounded object-cover shrink-0" />
                       <div>
                         <h3 className="font-extrabold text-white text-base truncate max-w-[140px]">{broker.name}</h3>
                         <div className="text-xs text-amber-400 flex items-center gap-1 mt-0.5">
@@ -255,7 +255,7 @@ export default async function IBCommissionOverviewPage({ searchParams }: { searc
                   {/* mechanisms list */}
                   <ul className="space-y-1.5 mt-4">
                     {broker.mechanisms.map((mech, mIdx) => (
-                      <li key={mIdx} className={`rounded-xl border transition-all hover:bg-white/5 ${mech.isTop
+                      <li key={mIdx} className={`rounded border transition-all hover:bg-white/5 ${mech.isTop
                           ? "border-orange-500/20 bg-orange-500/[0.03] hover:border-orange-500/40"
                           : "border-white/5 bg-white/[0.02]"
                         }`}>

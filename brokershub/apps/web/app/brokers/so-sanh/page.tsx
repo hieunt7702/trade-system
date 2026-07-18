@@ -42,13 +42,13 @@ export default function BrokerComparePage() {
         {/* Empty State / Comparison Select Section */}
         <section>
           <div className="max-w-2xl mx-auto px-4 lg:px-8 py-16 text-center">
-            <div className="rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-8 md:p-12">
+            <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-8 md:p-12">
               <div className="text-6xl mb-4">⚖️</div>
               <h2 className="text-2xl font-bold text-white mb-3">Chọn ít nhất 2 sàn để so sánh</h2>
               <p className="text-zinc-400 mb-6">
                 Vào trang Sàn giao dịch, click nút "So sánh" trên 2-4 broker bạn muốn. HieuNTHUB sẽ render bảng so sánh chi tiết spread, rebate, CPA, RevShare, giấy phép side-by-side.
               </p>
-              <Link href="/brokers" className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-orange-400 to-amber-600 px-8 py-4 font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-xl shadow-orange-500/30">
+              <Link href="/brokers" className="inline-flex items-center gap-2 rounded bg-gradient-to-r from-orange-400 to-amber-600 px-8 py-4 font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-xl shadow-orange-500/30">
                 Tìm sàn để so sánh →
               </Link>
             </div>

@@ -245,15 +245,15 @@ export default function CoursesPage() {
 
               <div className="lg:col-span-5 w-full">
                 <div className="grid grid-cols-3 gap-3">
-                  <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4 text-center">
+                  <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4 text-center">
                     <div className="text-2xl md:text-3xl font-extrabold text-orange-300 tabular-nums">{stats.total}</div>
                     <div className="text-[10px] text-zinc-500 uppercase tracking-wider font-bold mt-1">Khoá học</div>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4 text-center">
+                  <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4 text-center">
                     <div className="text-2xl md:text-3xl font-extrabold text-blue-300 tabular-nums">{stats.duration}</div>
                     <div className="text-[10px] text-zinc-500 uppercase tracking-wider font-bold mt-1">Thời lượng</div>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4 text-center">
+                  <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4 text-center">
                     <div className="text-2xl md:text-3xl font-extrabold text-emerald-300 tabular-nums">{stats.free}</div>
                     <div className="text-[10px] text-zinc-500 uppercase tracking-wider font-bold mt-1">Miễn phí</div>
                   </div>
@@ -267,7 +267,7 @@ export default function CoursesPage() {
         {featuredCourse && (
           <section className="border-b border-white/5 bg-[#0A0B0D]">
             <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10">
-              <Link href={`/courses/${featuredCourse.slug}`} className="group block rounded-3xl border border-orange-400/30 bg-gradient-to-br from-orange-500/15 via-amber-500/5 to-transparent overflow-hidden hover:border-orange-400/60 hover:shadow-2xl hover:shadow-orange-500/20 transition relative">
+              <Link href={`/courses/${featuredCourse.slug}`} className="group block rounded border border-orange-400/30 bg-gradient-to-br from-orange-500/15 via-amber-500/5 to-transparent overflow-hidden hover:border-orange-400/60 hover:shadow-2xl hover:shadow-orange-500/20 transition relative">
                 <div className="grid md:grid-cols-12 gap-0">
 
                   <div className="md:col-span-5 aspect-video md:aspect-auto relative overflow-hidden bg-zinc-900 min-h-[220px]">
@@ -298,7 +298,7 @@ export default function CoursesPage() {
                           <span className="text-3xl font-extrabold text-white">{featuredCourse.price}</span>
                           {!featuredCourse.isFree && <span className="text-sm text-zinc-400 font-semibold ml-1">USDT</span>}
                         </div>
-                        <span className="inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-orange-400 to-amber-600 px-5 py-2.5 text-sm font-extrabold text-zinc-950 group-hover:from-orange-300 group-hover:to-amber-500 transition shadow-lg">
+                        <span className="inline-flex items-center gap-1.5 rounded bg-gradient-to-r from-orange-400 to-amber-600 px-5 py-2.5 text-sm font-extrabold text-zinc-950 group-hover:from-orange-300 group-hover:to-amber-500 transition shadow-lg">
                           Xem khoá học →
                         </span>
                       </div>
@@ -329,12 +329,12 @@ export default function CoursesPage() {
                     setSearchQuery(e.target.value);
                     setCurrentPage(1);
                   }}
-                  className="w-full rounded-xl border border-white/10 bg-white/[0.04] pl-10 pr-4 py-2 text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-orange-400/40 focus:border-orange-400/50 transition"
+                  className="w-full rounded border border-white/10 bg-white/[0.04] pl-10 pr-4 py-2 text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-orange-400/40 focus:border-orange-400/50 transition"
                 />
               </div>
 
               {/* Difficulty filters */}
-              <div className="flex items-center gap-1.5 rounded-xl border border-white/10 bg-white/[0.04] p-1 self-start md:self-auto">
+              <div className="flex items-center gap-1.5 rounded border border-white/10 bg-white/[0.04] p-1 self-start md:self-auto">
                 {["", "Beginner", "Intermediate", "Advanced"].map((level) => (
                   <button
                     key={level}
@@ -343,7 +343,7 @@ export default function CoursesPage() {
                       setDifficultyFilter(level);
                       setCurrentPage(1);
                     }}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-bold transition ${difficultyFilter === level
+                    className={`px-3 py-1.5 rounded text-xs font-bold transition ${difficultyFilter === level
                         ? "bg-gradient-to-r from-orange-400 to-amber-600 text-zinc-950 shadow-md shadow-orange-500/25"
                         : "text-zinc-300 hover:bg-white/5 hover:text-orange-300"
                       }`}
@@ -368,7 +368,7 @@ export default function CoursesPage() {
             </div>
 
             {paginatedCourses.length === 0 ? (
-              <div className="text-center py-16 border border-dashed border-white/10 rounded-2xl bg-white/[0.01]">
+              <div className="text-center py-16 border border-dashed border-white/10 rounded bg-white/[0.01]">
                 <span className="text-4xl">📚</span>
                 <h3 className="mt-3 text-lg font-bold text-white">Chưa tìm thấy khóa học</h3>
                 <p className="text-sm text-zinc-500 mt-1">Hãy thử tìm với bộ lọc hoặc từ khóa khác.</p>
@@ -379,7 +379,7 @@ export default function CoursesPage() {
                   <Link
                     key={course.slug}
                     href={`/courses/${course.slug}`}
-                    className="group rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] overflow-hidden transition hover:border-orange-400/40 hover:shadow-xl hover:shadow-orange-500/10 hover:-translate-y-1 flex flex-col h-full"
+                    className="group rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] overflow-hidden transition hover:border-orange-400/40 hover:shadow-xl hover:shadow-orange-500/10 hover:-translate-y-1 flex flex-col h-full"
                   >
                     <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-indigo-500/5 relative overflow-hidden shrink-0">
                       <img src={course.cover} alt={course.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
@@ -504,7 +504,7 @@ export default function CoursesPage() {
         {/* Partners Call-To-Action (CTA) Section */}
         <section className="bg-[#0A0B0D]">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 py-12">
-            <div className="rounded-3xl border border-orange-400/30 bg-gradient-to-br from-orange-500/15 via-amber-500/5 to-transparent p-8 md:p-12 relative overflow-hidden">
+            <div className="rounded border border-orange-400/30 bg-gradient-to-br from-orange-500/15 via-amber-500/5 to-transparent p-8 md:p-12 relative overflow-hidden">
               <div className="absolute -top-32 -right-32 w-[400px] h-[400px] bg-orange-500/20 rounded-full blur-[100px] pointer-events-none"></div>
               <div className="relative grid md:grid-cols-12 gap-8 items-center">
                 <div className="md:col-span-7">
@@ -517,28 +517,28 @@ export default function CoursesPage() {
                   <p className="text-zinc-300 leading-relaxed mb-5 max-w-xl">
                     Đăng ký IB partner HieuNTHUB để được giảm giá / miễn phí một số khoá + nhận hoa hồng khi share course với client của bạn.
                   </p>
-                  <Link href="/ib-commission-overview" className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-orange-400 to-amber-600 px-6 py-3 font-extrabold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-xl shadow-orange-500/30">
+                  <Link href="/ib-commission-overview" className="inline-flex items-center gap-2 rounded bg-gradient-to-r from-orange-400 to-amber-600 px-6 py-3 font-extrabold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-xl shadow-orange-500/30">
                     Tìm hiểu chương trình IB →
                   </Link>
                 </div>
 
                 <div className="md:col-span-5 grid grid-cols-2 gap-3">
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-center">
+                  <div className="rounded border border-white/10 bg-white/[0.04] p-4 text-center">
                     <div className="text-2xl">💸</div>
                     <div className="mt-1 font-extrabold text-amber-300 text-lg">Giảm giá</div>
                     <div className="text-[11px] text-zinc-500 mt-0.5">Khoá trả phí</div>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-center">
+                  <div className="rounded border border-white/10 bg-white/[0.04] p-4 text-center">
                     <div className="text-2xl">📤</div>
                     <div className="mt-1 font-extrabold text-emerald-300 text-lg">Ref share</div>
                     <div className="text-[11px] text-zinc-500 mt-0.5">Hoa hồng/đơn</div>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-center">
+                  <div className="rounded border border-white/10 bg-white/[0.04] p-4 text-center">
                     <div className="text-2xl">📜</div>
                     <div className="mt-1 font-extrabold text-blue-300 text-lg">Cert</div>
                     <div className="text-[11px] text-zinc-500 mt-0.5">Hoàn thành</div>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-4 text-center">
+                  <div className="rounded border border-white/10 bg-white/[0.04] p-4 text-center">
                     <div className="text-2xl">∞</div>
                     <div className="mt-1 font-extrabold text-purple-300 text-lg">Trọn đời</div>
                     <div className="text-[11px] text-zinc-500 mt-0.5">Truy cập</div>

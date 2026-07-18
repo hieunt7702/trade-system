@@ -109,7 +109,7 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
               {/* Left Column info */}
               <div className="lg:col-span-7">
                 <div className="flex items-start gap-5 mb-5">
-                  <img src={broker.logo} alt={broker.name} className="h-20 w-20 rounded-2xl object-cover shrink-0 shadow-xl" />
+                  <img src={broker.logo} alt={broker.name} className="h-20 w-20 rounded object-cover shrink-0 shadow-xl" />
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap mb-2">
                       <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 px-2.5 py-0.5 text-xs font-semibold">
@@ -155,7 +155,7 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
 
                 {/* Quick Info Grid */}
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4">
+                  <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-base">📅</span>
                       <span className="text-[10px] text-zinc-500 uppercase tracking-wider font-bold">Năm thành lập</span>
@@ -163,28 +163,28 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
                     <div className="font-extrabold text-blue-300 text-base truncate">{broker.foundedYear}</div>
                     {broker.yearsActive && <div className="text-[10px] text-zinc-500 mt-0.5">{broker.yearsActive}</div>}
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4">
+                  <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-base">⚡</span>
                       <span className="text-[10px] text-zinc-500 uppercase tracking-wider font-bold">Max leverage</span>
                     </div>
                     <div className="font-extrabold text-amber-300 text-base truncate">{broker.maxLeverage}</div>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4">
+                  <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-base">⏱️</span>
                       <span className="text-[10px] text-zinc-500 uppercase tracking-wider font-bold">Rút tiền</span>
                     </div>
                     <div className="font-extrabold text-purple-300 text-base truncate">{broker.withdrawalTime}</div>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4">
+                  <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-base">🌍</span>
                       <span className="text-[10px] text-zinc-500 uppercase tracking-wider font-bold">Khu vực</span>
                     </div>
                     <div className="font-extrabold text-rose-300 text-base truncate">{broker.region}</div>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4">
+                  <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-base">⚖️</span>
                       <span className="text-[10px] text-zinc-500 uppercase tracking-wider font-bold">Khớp lệnh</span>
@@ -195,7 +195,7 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
 
                 {/* Card footer options */}
                 <div className="mt-5 flex flex-wrap items-center gap-3">
-                  <button type="button" className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 hover:border-orange-400/40 hover:bg-orange-500/10 hover:text-orange-300 px-4 py-2 text-sm font-semibold text-zinc-300 transition">So sánh</button>
+                  <button type="button" className="inline-flex items-center gap-2 rounded border border-white/10 bg-white/5 hover:border-orange-400/40 hover:bg-orange-500/10 hover:text-orange-300 px-4 py-2 text-sm font-semibold text-zinc-300 transition">So sánh</button>
                   <Link href="/brokers/so-sanh" className="text-sm text-zinc-400 hover:text-orange-300 transition">
                     Xem trang so sánh →
                   </Link>
@@ -204,7 +204,7 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
 
               {/* Right Column Sticky CTA Card */}
               <div className="lg:col-span-5">
-                <div className="sticky top-24 rounded-2xl border border-orange-400/30 bg-gradient-to-b from-orange-500/15 via-amber-500/5 to-transparent p-5 md:p-6 shadow-2xl shadow-orange-500/10">
+                <div className="sticky top-24 rounded border border-orange-400/30 bg-gradient-to-b from-orange-500/15 via-amber-500/5 to-transparent p-5 md:p-6 shadow-2xl shadow-orange-500/10">
                   <div className="flex items-center justify-between gap-3 mb-4">
                     <div className="min-w-0">
                       <div className="inline-flex items-center gap-1.5 rounded-full bg-orange-400/15 border border-orange-400/30 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.12em] text-orange-300 font-bold">
@@ -213,7 +213,7 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
                       </div>
                       <h3 className="mt-2 text-lg md:text-xl font-extrabold text-white truncate">Đăng ký {broker.name}</h3>
                     </div>
-                    <img src={broker.logo} alt="" className="h-12 w-12 rounded-xl object-cover shrink-0" />
+                    <img src={broker.logo} alt="" className="h-12 w-12 rounded object-cover shrink-0" />
                   </div>
 
                   {broker.hasRebate && (
@@ -225,16 +225,16 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
                     </div>
                   )}
 
-                  <div className="grid grid-cols-3 gap-1.5 mb-4 rounded-xl border border-white/10 bg-white/[0.03] p-1.5">
-                    <div className="rounded-lg px-2.5 py-2 text-center">
+                  <div className="grid grid-cols-3 gap-1.5 mb-4 rounded border border-white/10 bg-white/[0.03] p-1.5">
+                    <div className="rounded px-2.5 py-2 text-center">
                       <div className="text-[9px] text-zinc-500 uppercase tracking-wider font-semibold">Min</div>
                       <div className="font-extrabold text-white text-sm tabular-nums truncate">{broker.minDeposit}</div>
                     </div>
-                    <div className="rounded-lg px-2.5 py-2 text-center border-x border-white/5">
+                    <div className="rounded px-2.5 py-2 text-center border-x border-white/5">
                       <div className="text-[9px] text-zinc-500 uppercase tracking-wider font-semibold">Đòn bẩy</div>
                       <div className="font-extrabold text-white text-sm tabular-nums truncate">{broker.maxLeverage}</div>
                     </div>
-                    <div className="rounded-lg px-2.5 py-2 text-center">
+                    <div className="rounded px-2.5 py-2 text-center">
                       <div className="text-[9px] text-zinc-500 uppercase tracking-wider font-semibold">XAU</div>
                       <div className="font-extrabold text-white text-sm tabular-nums truncate">—</div>
                     </div>
@@ -247,11 +247,11 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
                         <div className="h-px flex-1 bg-gradient-to-r from-orange-400/30 to-transparent"></div>
                       </div>
                       <div className="space-y-2">
-                        <a href="https://www.ecmarkets.com/" target="_blank" rel="nofollow noopener" className="flex items-center justify-between gap-3 rounded-xl px-4 py-3 transition group bg-gradient-to-r from-orange-400 to-amber-600 text-zinc-950 font-extrabold shadow-lg shadow-orange-500/25 hover:from-orange-300 hover:to-amber-500">
+                        <a href="https://www.ecmarkets.com/" target="_blank" rel="nofollow noopener" className="flex items-center justify-between gap-3 rounded px-4 py-3 transition group bg-gradient-to-r from-orange-400 to-amber-600 text-zinc-950 font-extrabold shadow-lg shadow-orange-500/25 hover:from-orange-300 hover:to-amber-500">
                           <span className="text-sm truncate">Primary Register Link</span>
                           <svg className="h-4 w-4 shrink-0 group-hover:translate-x-0.5 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                         </a>
-                        <a href="https://www.ecmarkets.com/" target="_blank" rel="nofollow noopener" className="flex items-center justify-between gap-3 rounded-xl px-4 py-3 transition group bg-white/[0.04] border border-white/10 text-zinc-100 hover:border-orange-400/40 hover:bg-orange-500/10 hover:text-orange-200 font-semibold">
+                        <a href="https://www.ecmarkets.com/" target="_blank" rel="nofollow noopener" className="flex items-center justify-between gap-3 rounded px-4 py-3 transition group bg-white/[0.04] border border-white/10 text-zinc-100 hover:border-orange-400/40 hover:bg-orange-500/10 hover:text-orange-200 font-semibold">
                           <span className="text-sm truncate">Standard Link 2</span>
                           <svg className="h-4 w-4 shrink-0 group-hover:translate-x-0.5 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                         </a>
@@ -294,9 +294,9 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
               <h2 className="text-2xl md:text-3xl font-bold text-white">Ưu &amp; nhược điểm</h2>
             </div>
             <div className="grid md:grid-cols-2 gap-5">
-              <div className="rounded-2xl border border-emerald-400/20 bg-gradient-to-b from-emerald-500/10 to-emerald-500/[0.02] p-6">
+              <div className="rounded border border-emerald-400/20 bg-gradient-to-b from-emerald-500/10 to-emerald-500/[0.02] p-6">
                 <h3 className="text-base font-extrabold text-emerald-300 mb-4 flex items-center gap-2">
-                  <span className="inline-flex items-center justify-center h-8 w-8 rounded-lg bg-emerald-500/20 border border-emerald-400/30">
+                  <span className="inline-flex items-center justify-center h-8 w-8 rounded bg-emerald-500/20 border border-emerald-400/30">
                     <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" /></svg>
                   </span>
                   Ưu điểm
@@ -311,9 +311,9 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
                 </ul>
               </div>
 
-              <div className="rounded-2xl border border-rose-400/20 bg-gradient-to-b from-rose-500/10 to-rose-500/[0.02] p-6">
+              <div className="rounded border border-rose-400/20 bg-gradient-to-b from-rose-500/10 to-rose-500/[0.02] p-6">
                 <h3 className="text-base font-extrabold text-rose-300 mb-4 flex items-center gap-2">
-                  <span className="inline-flex items-center justify-center h-8 w-8 rounded-lg bg-rose-500/20 border border-rose-400/30">
+                  <span className="inline-flex items-center justify-center h-8 w-8 rounded bg-rose-500/20 border border-rose-400/30">
                     <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" /></svg>
                   </span>
                   Nhược điểm
@@ -340,7 +340,7 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
             </div>
 
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-6">
+              <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-6">
                 <div className="text-[10px] uppercase tracking-wider text-blue-300 font-bold mb-3 flex items-center gap-1.5">📱 Nền tảng</div>
                 <div className="flex flex-wrap gap-2">
                   {broker.platforms.map((plat: string, idx: number) => (
@@ -349,7 +349,7 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-6">
+              <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-6">
                 <div className="text-[10px] uppercase tracking-wider text-purple-300 font-bold mb-3 flex items-center gap-1.5">👤 Loại tài khoản</div>
                 <div className="flex flex-wrap gap-2">
                   {broker.accounts.map((acc: string, idx: number) => (
@@ -358,7 +358,7 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-6">
+              <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-6">
                 <div className="text-[10px] uppercase tracking-wider text-amber-300 font-bold mb-3 flex items-center gap-1.5">💎 Sản phẩm</div>
                 <div className="flex flex-wrap gap-2">
                   {broker.products.map((prod: string, idx: number) => (
@@ -367,7 +367,7 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-6">
+              <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-6">
                 <div className="text-[10px] uppercase tracking-wider text-zinc-500 font-bold mb-2">Mô hình khớp lệnh</div>
                 <div className="text-2xl md:text-3xl font-extrabold text-emerald-300">{broker.executionModel}</div>
               </div>
@@ -386,10 +386,10 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {broker.mechanisms.map((mech: any, idx: number) => (
-                <div key={idx} className="group text-left rounded-2xl border border-amber-400/30 bg-gradient-to-br from-amber-500/10 to-amber-500/[0.02] hover:border-amber-400/50 hover:shadow-lg hover:shadow-orange-500/10 transition p-6 flex flex-col justify-between">
+                <div key={idx} className="group text-left rounded border border-amber-400/30 bg-gradient-to-br from-amber-500/10 to-amber-500/[0.02] hover:border-amber-400/50 hover:shadow-lg hover:shadow-orange-500/10 transition p-6 flex flex-col justify-between">
                   <div>
                     <div className="flex items-start justify-between gap-3 mb-4">
-                      <div className="inline-flex items-center justify-center h-12 w-12 rounded-xl bg-amber-500/15 border border-amber-400/30 text-amber-300">
+                      <div className="inline-flex items-center justify-center h-12 w-12 rounded bg-amber-500/15 border border-amber-400/30 text-amber-300">
                         <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                       </div>
                       <span className={`rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider ${mech.tier === "VIP" ? "bg-orange-500 text-zinc-950" : "bg-amber-500/20 border border-amber-400/40 text-amber-300"
@@ -428,7 +428,7 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
             </div>
 
             <div className="grid gap-5 lg:grid-cols-3">
-              <div className="rounded-2xl border border-amber-400/20 bg-gradient-to-b from-amber-500/10 to-amber-500/[0.02] p-6">
+              <div className="rounded border border-amber-400/20 bg-gradient-to-b from-amber-500/10 to-amber-500/[0.02] p-6">
                 <div className="text-[10px] uppercase tracking-wider text-amber-300 font-bold mb-2">Độ tin cậy HH</div>
                 <div className="flex items-center gap-2 mb-3">
                   <div className="text-3xl font-extrabold text-amber-200">{broker.trustLevel}</div>
@@ -462,9 +462,9 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
                 <div className="text-[10px] uppercase tracking-wider text-emerald-300 font-bold mb-2">Giấy phép ({broker.licensesCount})</div>
                 <div className="grid sm:grid-cols-2 gap-3">
                   {broker.licenses.map((lic: any, idx: number) => (
-                    <div key={idx} className="rounded-xl border transition p-4 border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] hover:border-orange-400/40">
+                    <div key={idx} className="rounded border transition p-4 border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] hover:border-orange-400/40">
                       <div className="flex items-start gap-3">
-                        <div className="h-12 w-12 rounded-lg shrink-0 flex items-center justify-center bg-white/[0.04] backdrop-blur-sm p-1.5 overflow-hidden ring-1 ring-white/15">
+                        <div className="h-12 w-12 rounded shrink-0 flex items-center justify-center bg-white/[0.04] backdrop-blur-sm p-1.5 overflow-hidden ring-1 ring-white/15">
                           <img src={lic.regulatorLogo} alt={lic.shortCode} className="h-full w-full object-contain" />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -497,7 +497,7 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
 
             <div className="grid gap-3 lg:grid-cols-2">
               {broker.faqs.map((faq: any, idx: number) => (
-                <details key={idx} className="group rounded-2xl border border-white/10 bg-white/[0.03] hover:border-orange-400/30 transition overflow-hidden h-fit">
+                <details key={idx} className="group rounded border border-white/10 bg-white/[0.03] hover:border-orange-400/30 transition overflow-hidden h-fit">
                   <summary className="cursor-pointer list-none flex items-start justify-between gap-4 px-5 py-4 font-semibold text-white hover:bg-white/[0.02] transition select-none">
                     <span className="leading-relaxed">{faq.q}</span>
                     <svg className="h-5 w-5 text-zinc-400 transition group-open:rotate-180 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
@@ -520,9 +520,9 @@ export default async function BrokerDetailPage({ params }: { params: any }) {
             </div>
             <div className="grid gap-5 md:grid-cols-3">
               {broker.similar.map((sim: any, idx: number) => (
-                <Link key={idx} href={`/brokers/danh-gia-${sim.slug}`} className="group rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] hover:border-orange-400/40 hover:shadow-lg hover:shadow-orange-500/10 transition p-5 flex flex-col justify-between">
+                <Link key={idx} href={`/brokers/danh-gia-${sim.slug}`} className="group rounded border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] hover:border-orange-400/40 hover:shadow-lg hover:shadow-orange-500/10 transition p-5 flex flex-col justify-between">
                   <div className="flex items-center gap-4">
-                    <img src={sim.logo} alt={sim.name} className="h-14 w-14 rounded-xl object-cover shrink-0 shadow-sm" />
+                    <img src={sim.logo} alt={sim.name} className="h-14 w-14 rounded object-cover shrink-0 shadow-sm" />
                     <div className="flex-1 min-w-0">
                       <h3 className="font-extrabold text-white text-base group-hover:text-orange-300 transition truncate">{sim.name}</h3>
                       <div className="text-xs text-amber-400 mt-0.5">★ {sim.rating}</div>

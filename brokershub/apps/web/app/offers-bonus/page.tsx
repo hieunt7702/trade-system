@@ -124,13 +124,13 @@ export default async function OffersBonusPage({ searchParams }: { searchParams?:
 
               {/* Search Bar */}
               <div className="flex flex-col sm:flex-row gap-3 items-stretch">
-                <div className="flex-1 flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-4 py-2.5 focus-within:border-orange-400/50 transition">
+                <div className="flex-1 flex items-center gap-3 rounded border border-white/10 bg-white/5 px-4 py-2.5 focus-within:border-orange-400/50 transition">
                   <svg className="h-4 w-4 text-zinc-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                   </svg>
                   <input type="text" name="q" placeholder="Tìm sàn (FPG, Mitrade, Exness)" className="flex-1 bg-transparent placeholder:text-zinc-500 outline-none text-sm text-zinc-100" />
                 </div>
-                <button type="submit" className="rounded-xl bg-gradient-to-r from-orange-400 to-amber-600 px-6 py-2.5 text-sm font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-lg shadow-orange-500/20">
+                <button type="submit" className="rounded bg-gradient-to-r from-orange-400 to-amber-600 px-6 py-2.5 text-sm font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-lg shadow-orange-500/20">
                   Tìm sàn
                 </button>
               </div>
@@ -205,11 +205,11 @@ export default async function OffersBonusPage({ searchParams }: { searchParams?:
           <div className="max-w-7xl mx-auto px-4 lg:px-8 pb-12">
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {offers.map((offer) => (
-                <article key={offer.id} className="group rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] hover:border-orange-400/40 hover:shadow-lg hover:shadow-orange-500/10 transition flex flex-col p-6">
+                <article key={offer.id} className="group rounded border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] hover:border-orange-400/40 hover:shadow-lg hover:shadow-orange-500/10 transition flex flex-col p-6">
 
                   {/* Broker Header */}
                   <div className="flex items-start gap-4 mb-5">
-                    <img src={offer.logo} alt={offer.name} className="h-14 w-14 rounded-xl object-cover shrink-0 shadow-md" />
+                    <img src={offer.logo} alt={offer.name} className="h-14 w-14 rounded object-cover shrink-0 shadow-md" />
                     <div className="flex-1 min-w-0">
                       <Link href={`/brokers/danh-gia-${offer.slug}`} className="block font-extrabold text-lg text-white hover:text-orange-300 transition truncate">
                         {offer.name}
@@ -232,7 +232,7 @@ export default async function OffersBonusPage({ searchParams }: { searchParams?:
                         href={bonus.link}
                         target="_blank"
                         rel="nofollow noopener"
-                        className={`flex items-center justify-between gap-2 rounded-xl border px-3 py-2.5 text-sm font-semibold transition ${bonus.colorClass}`}
+                        className={`flex items-center justify-between gap-2 rounded border px-3 py-2.5 text-sm font-semibold transition ${bonus.colorClass}`}
                       >
                         <span className="flex items-center gap-2 truncate">
                           <span className="text-base shrink-0">{bonus.emoji}</span>
@@ -251,7 +251,7 @@ export default async function OffersBonusPage({ searchParams }: { searchParams?:
                       href={offer.claimLink}
                       target="_blank"
                       rel="nofollow noopener"
-                      className="flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-orange-400 to-amber-600 px-4 py-2.5 text-sm font-extrabold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-lg shadow-orange-500/20"
+                      className="flex items-center justify-center gap-2 rounded bg-gradient-to-r from-orange-400 to-amber-600 px-4 py-2.5 text-sm font-extrabold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-lg shadow-orange-500/20"
                     >
                       Nhận khuyến mãi
                       <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -271,7 +271,7 @@ export default async function OffersBonusPage({ searchParams }: { searchParams?:
         {/* consultation banner */}
         <section className="border-b border-white/5">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 py-12">
-            <div className="rounded-3xl border border-orange-400/30 bg-gradient-to-br from-orange-500/15 via-amber-500/5 to-transparent p-8 md:p-12 relative overflow-hidden">
+            <div className="rounded border border-orange-400/30 bg-gradient-to-br from-orange-500/15 via-amber-500/5 to-transparent p-8 md:p-12 relative overflow-hidden">
               <div className="absolute -top-32 -right-32 w-[400px] h-[400px] bg-orange-500/20 rounded-full blur-[100px] pointer-events-none"></div>
               <div className="relative grid md:grid-cols-2 gap-8 items-center">
                 <div>
@@ -285,10 +285,10 @@ export default async function OffersBonusPage({ searchParams }: { searchParams?:
                   <p className="mt-3 text-zinc-400">Team HH support 1-1 qua Telegram. Phân tích cơ chế bonus + điều kiện rút.</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 md:justify-end">
-                  <Link href="/contact" className="rounded-xl bg-gradient-to-r from-orange-400 to-amber-600 px-6 py-3.5 font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-xl shadow-orange-500/30 text-center">
+                  <Link href="/contact" className="rounded bg-gradient-to-r from-orange-400 to-amber-600 px-6 py-3.5 font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-xl shadow-orange-500/30 text-center">
                     Liên hệ tư vấn
                   </Link>
-                  <Link href="/brokers" className="rounded-xl border border-white/10 bg-white/5 px-6 py-3.5 font-semibold text-white hover:border-white/20 transition text-center">
+                  <Link href="/brokers" className="rounded border border-white/10 bg-white/5 px-6 py-3.5 font-semibold text-white hover:border-white/20 transition text-center">
                     So sánh broker
                   </Link>
                 </div>

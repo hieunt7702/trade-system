@@ -229,7 +229,7 @@ export default function AdminOffersPage() {
         </div>
         <button
           onClick={handleOpenAdd}
-          className="flex items-center gap-2 px-4 py-2.5 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl transition shadow-lg shadow-orange-500/20 text-sm whitespace-nowrap self-start sm:self-center"
+          className="flex items-center gap-2 px-4 py-2.5 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded transition shadow-lg shadow-orange-500/20 text-sm whitespace-nowrap self-start sm:self-center"
         >
           <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 4v16m8-8H4" /></svg>
           Thêm Khuyến Mãi Mới
@@ -237,7 +237,7 @@ export default function AdminOffersPage() {
       </div>
 
       {/* Filter and Search Bar */}
-      <div className="bg-zinc-900 border border-zinc-800 p-5 rounded-2xl space-y-4">
+      <div className="bg-zinc-900 border border-zinc-800 p-5 rounded space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Search bar */}
           <div className="md:col-span-2 relative">
@@ -249,14 +249,14 @@ export default function AdminOffersPage() {
                 setSearch(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full px-4 py-2.5 bg-zinc-950 border border-zinc-800 rounded-xl text-sm text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:border-amber-500/50"
+              className="w-full px-4 py-2.5 bg-zinc-950 border border-zinc-800 rounded text-sm text-zinc-100 placeholder:text-zinc-500 focus:outline-none focus:border-amber-500/50"
             />
           </div>
 
           {/* Type filter */}
           <div>
             <details className="relative group w-full" data-hh-nav-dropdown="">
-              <summary className="list-none cursor-pointer w-full px-4 py-2.5 bg-zinc-950 border border-zinc-800 rounded-xl text-sm text-zinc-100 flex items-center justify-between hover:border-zinc-700 transition">
+              <summary className="list-none cursor-pointer w-full px-4 py-2.5 bg-zinc-950 border border-zinc-800 rounded text-sm text-zinc-100 flex items-center justify-between hover:border-zinc-700 transition">
                 <span>
                   {typeFilter === '' ? 'Tất cả loại Bonus' : 
                    typeFilter === 'WELCOME_BONUS' ? 'Thưởng chào mừng (Welcome)' : 
@@ -265,28 +265,28 @@ export default function AdminOffersPage() {
                 <svg className="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
               </summary>
               <div className="absolute left-0 top-full mt-2 w-full z-50">
-                <div className="rounded-xl border border-white/10 bg-zinc-900/95 backdrop-blur-md p-1.5 shadow-2xl flex flex-col gap-1">
+                <div className="rounded border border-white/10 bg-zinc-900/95 backdrop-blur-md p-1.5 shadow-2xl flex flex-col gap-1">
                   <button
                     onClick={(e) => { e.preventDefault(); setTypeFilter(''); setCurrentPage(1); document.activeElement instanceof HTMLElement && document.activeElement.blur(); }}
-                    className={`w-full text-left rounded-lg px-3 py-2 text-sm transition ${typeFilter === '' ? 'bg-orange-500/10 text-orange-400' : 'text-zinc-300 hover:bg-white/5 hover:text-white'}`}
+                    className={`w-full text-left rounded px-3 py-2 text-sm transition ${typeFilter === '' ? 'bg-orange-500/10 text-orange-400' : 'text-zinc-300 hover:bg-white/5 hover:text-white'}`}
                   >
                     Tất cả loại Bonus
                   </button>
                   <button
                     onClick={(e) => { e.preventDefault(); setTypeFilter('WELCOME_BONUS'); setCurrentPage(1); document.activeElement instanceof HTMLElement && document.activeElement.blur(); }}
-                    className={`w-full text-left rounded-lg px-3 py-2 text-sm transition ${typeFilter === 'WELCOME_BONUS' ? 'bg-orange-500/10 text-orange-400' : 'text-zinc-300 hover:bg-white/5 hover:text-white'}`}
+                    className={`w-full text-left rounded px-3 py-2 text-sm transition ${typeFilter === 'WELCOME_BONUS' ? 'bg-orange-500/10 text-orange-400' : 'text-zinc-300 hover:bg-white/5 hover:text-white'}`}
                   >
                     Thưởng chào mừng (Welcome)
                   </button>
                   <button
                     onClick={(e) => { e.preventDefault(); setTypeFilter('DEPOSIT_BONUS'); setCurrentPage(1); document.activeElement instanceof HTMLElement && document.activeElement.blur(); }}
-                    className={`w-full text-left rounded-lg px-3 py-2 text-sm transition ${typeFilter === 'DEPOSIT_BONUS' ? 'bg-orange-500/10 text-orange-400' : 'text-zinc-300 hover:bg-white/5 hover:text-white'}`}
+                    className={`w-full text-left rounded px-3 py-2 text-sm transition ${typeFilter === 'DEPOSIT_BONUS' ? 'bg-orange-500/10 text-orange-400' : 'text-zinc-300 hover:bg-white/5 hover:text-white'}`}
                   >
                     Thưởng nạp tiền (Deposit)
                   </button>
                   <button
                     onClick={(e) => { e.preventDefault(); setTypeFilter('NO_DEPOSIT'); setCurrentPage(1); document.activeElement instanceof HTMLElement && document.activeElement.blur(); }}
-                    className={`w-full text-left rounded-lg px-3 py-2 text-sm transition ${typeFilter === 'NO_DEPOSIT' ? 'bg-orange-500/10 text-orange-400' : 'text-zinc-300 hover:bg-white/5 hover:text-white'}`}
+                    className={`w-full text-left rounded px-3 py-2 text-sm transition ${typeFilter === 'NO_DEPOSIT' ? 'bg-orange-500/10 text-orange-400' : 'text-zinc-300 hover:bg-white/5 hover:text-white'}`}
                   >
                     Không cần nạp tiền (No Deposit)
                   </button>
@@ -298,7 +298,7 @@ export default function AdminOffersPage() {
       </div>
 
       {/* Main Table */}
-      <div className="bg-zinc-900 border border-zinc-800 rounded-2xl flex flex-col flex-1 overflow-hidden shadow-xl min-h-0">
+      <div className="bg-zinc-900 border border-zinc-800 rounded flex flex-col flex-1 overflow-hidden shadow-xl min-h-0">
         <div className="overflow-x-auto overflow-y-auto flex-1 min-h-[300px]">
           <table className="w-full text-left text-sm text-zinc-300">
             <thead className="bg-zinc-950 border-b border-zinc-800 text-zinc-400 text-xs uppercase tracking-wider">
@@ -384,21 +384,21 @@ export default function AdminOffersPage() {
                     <td className="px-6 py-4 text-xs text-zinc-400">{offer.validUntil || 'Vô thời hạn'}</td>
                     <td className="px-6 py-4 text-right">
                       <details className="relative group text-left inline-block" data-hh-nav-dropdown="">
-                        <summary className="list-none cursor-pointer p-1.5 hover:bg-zinc-800 rounded-md transition text-zinc-400 hover:text-white">
+                        <summary className="list-none cursor-pointer p-1.5 hover:bg-zinc-800 rounded transition text-zinc-400 hover:text-white">
                           <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" /></svg>
                         </summary>
                         <div className="absolute right-0 top-full mt-1 z-50 min-w-[120px] shadow-xl">
-                          <div className="rounded-xl border border-white/10 bg-zinc-900/95 backdrop-blur-md p-1.5 flex flex-col gap-1">
+                          <div className="rounded border border-white/10 bg-zinc-900/95 backdrop-blur-md p-1.5 flex flex-col gap-1">
                             <button
                               onClick={() => handleOpenEdit(offer)}
-                              className="w-full text-left rounded-lg px-3 py-2 text-sm transition text-zinc-300 hover:bg-white/5 hover:text-white flex items-center gap-2"
+                              className="w-full text-left rounded px-3 py-2 text-sm transition text-zinc-300 hover:bg-white/5 hover:text-white flex items-center gap-2"
                             >
                               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
                               Sửa
                             </button>
                             <button
                               onClick={() => handleDelete(offer.id)}
-                              className="w-full text-left rounded-lg px-3 py-2 text-sm transition text-rose-400 hover:bg-rose-500/10 flex items-center gap-2"
+                              className="w-full text-left rounded px-3 py-2 text-sm transition text-rose-400 hover:bg-rose-500/10 flex items-center gap-2"
                             >
                               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
                               Xóa
@@ -429,7 +429,7 @@ export default function AdminOffersPage() {
               <button
                 disabled={currentPage === 1}
                 onClick={() => setCurrentPage(currentPage - 1)}
-                className="px-2.5 py-1.5 bg-zinc-900 border border-zinc-800 text-white font-bold rounded-lg disabled:opacity-40 transition"
+                className="px-2.5 py-1.5 bg-zinc-900 border border-zinc-800 text-white font-bold rounded disabled:opacity-40 transition"
               >
                 Trước
               </button>
@@ -439,7 +439,7 @@ export default function AdminOffersPage() {
               <button
                 disabled={currentPage === totalPages}
                 onClick={() => setCurrentPage(currentPage + 1)}
-                className="px-2.5 py-1.5 bg-zinc-900 border border-zinc-800 text-white font-bold rounded-lg disabled:opacity-40 transition"
+                className="px-2.5 py-1.5 bg-zinc-900 border border-zinc-800 text-white font-bold rounded disabled:opacity-40 transition"
               >
                 Sau
               </button>
@@ -464,7 +464,7 @@ export default function AdminOffersPage() {
               <h2 className="text-xl font-bold text-white">
                 {editOffer ? 'Chỉnh Sửa Khuyến Mãi' : 'Thêm Khuyến Mãi Mới'}
               </h2>
-              <button onClick={() => setShowModal(false)} className="p-1.5 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white transition">
+              <button onClick={() => setShowModal(false)} className="p-1.5 rounded bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white transition">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
               </button>
             </div>
@@ -479,7 +479,7 @@ export default function AdminOffersPage() {
                   required
                   value={formData.title}
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                  className="w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-xl text-sm text-white focus:outline-none focus:border-amber-500/50"
+                  className="w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded text-sm text-white focus:outline-none focus:border-amber-500/50"
                   placeholder="VD: Nhận ngay 30 USD chào mừng"
                 />
               </div>
@@ -489,7 +489,7 @@ export default function AdminOffersPage() {
                 <textarea
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  className="w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-xl text-sm text-white focus:outline-none focus:border-amber-500/50 min-h-[80px]"
+                  className="w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded text-sm text-white focus:outline-none focus:border-amber-500/50 min-h-[80px]"
                   placeholder="Mô tả cơ chế hoặc điều kiện..."
                 />
               </div>
@@ -498,18 +498,18 @@ export default function AdminOffersPage() {
                 <div>
                   <label className="block text-xs font-bold text-zinc-400 mb-1 uppercase tracking-wide">Sàn liên kết</label>
                   <details className="relative group w-full" data-hh-nav-dropdown="">
-                    <summary className="list-none cursor-pointer w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-xl text-sm text-white flex items-center justify-between focus:outline-none focus:border-amber-500/50">
+                    <summary className="list-none cursor-pointer w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded text-sm text-white flex items-center justify-between focus:outline-none focus:border-amber-500/50">
                       <span>{brokers.find(b => b.id === formData.brokerId)?.name || 'Chọn sàn'}</span>
                       <svg className="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
                     </summary>
                     <div className="absolute left-0 top-full mt-2 w-full z-50">
-                      <div className="rounded-xl border border-white/10 bg-zinc-900/95 backdrop-blur-md p-1.5 shadow-2xl flex flex-col gap-1 max-h-48 overflow-y-auto">
+                      <div className="rounded border border-white/10 bg-zinc-900/95 backdrop-blur-md p-1.5 shadow-2xl flex flex-col gap-1 max-h-48 overflow-y-auto">
                         {brokers.map((b) => (
                           <button
                             key={b.id}
                             type="button"
                             onClick={(e) => { e.preventDefault(); setFormData({ ...formData, brokerId: b.id }); document.activeElement instanceof HTMLElement && document.activeElement.blur(); }}
-                            className={`w-full text-left rounded-lg px-3 py-2 text-sm transition ${formData.brokerId === b.id ? 'bg-orange-500/10 text-orange-400' : 'text-zinc-300 hover:bg-white/5 hover:text-white'}`}
+                            className={`w-full text-left rounded px-3 py-2 text-sm transition ${formData.brokerId === b.id ? 'bg-orange-500/10 text-orange-400' : 'text-zinc-300 hover:bg-white/5 hover:text-white'}`}
                           >
                             {b.name}
                           </button>
@@ -521,30 +521,30 @@ export default function AdminOffersPage() {
                 <div>
                   <label className="block text-xs font-bold text-zinc-400 mb-1 uppercase tracking-wide">Loại Khuyến mãi</label>
                   <details className="relative group w-full" data-hh-nav-dropdown="">
-                    <summary className="list-none cursor-pointer w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-xl text-sm text-white flex items-center justify-between focus:outline-none focus:border-amber-500/50">
+                    <summary className="list-none cursor-pointer w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded text-sm text-white flex items-center justify-between focus:outline-none focus:border-amber-500/50">
                       <span>{formData.type === 'WELCOME_BONUS' ? 'WELCOME_BONUS' : formData.type === 'DEPOSIT_BONUS' ? 'DEPOSIT_BONUS' : 'NO_DEPOSIT'}</span>
                       <svg className="w-4 h-4 text-zinc-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
                     </summary>
                     <div className="absolute left-0 top-full mt-2 w-full z-50">
-                      <div className="rounded-xl border border-white/10 bg-zinc-900/95 backdrop-blur-md p-1.5 shadow-2xl flex flex-col gap-1">
+                      <div className="rounded border border-white/10 bg-zinc-900/95 backdrop-blur-md p-1.5 shadow-2xl flex flex-col gap-1">
                         <button
                           type="button"
                           onClick={(e) => { e.preventDefault(); setFormData({ ...formData, type: 'WELCOME_BONUS' }); document.activeElement instanceof HTMLElement && document.activeElement.blur(); }}
-                          className={`w-full text-left rounded-lg px-3 py-2 text-sm transition ${formData.type === 'WELCOME_BONUS' ? 'bg-orange-500/10 text-orange-400' : 'text-zinc-300 hover:bg-white/5 hover:text-white'}`}
+                          className={`w-full text-left rounded px-3 py-2 text-sm transition ${formData.type === 'WELCOME_BONUS' ? 'bg-orange-500/10 text-orange-400' : 'text-zinc-300 hover:bg-white/5 hover:text-white'}`}
                         >
                           WELCOME_BONUS
                         </button>
                         <button
                           type="button"
                           onClick={(e) => { e.preventDefault(); setFormData({ ...formData, type: 'DEPOSIT_BONUS' }); document.activeElement instanceof HTMLElement && document.activeElement.blur(); }}
-                          className={`w-full text-left rounded-lg px-3 py-2 text-sm transition ${formData.type === 'DEPOSIT_BONUS' ? 'bg-orange-500/10 text-orange-400' : 'text-zinc-300 hover:bg-white/5 hover:text-white'}`}
+                          className={`w-full text-left rounded px-3 py-2 text-sm transition ${formData.type === 'DEPOSIT_BONUS' ? 'bg-orange-500/10 text-orange-400' : 'text-zinc-300 hover:bg-white/5 hover:text-white'}`}
                         >
                           DEPOSIT_BONUS
                         </button>
                         <button
                           type="button"
                           onClick={(e) => { e.preventDefault(); setFormData({ ...formData, type: 'NO_DEPOSIT' }); document.activeElement instanceof HTMLElement && document.activeElement.blur(); }}
-                          className={`w-full text-left rounded-lg px-3 py-2 text-sm transition ${formData.type === 'NO_DEPOSIT' ? 'bg-orange-500/10 text-orange-400' : 'text-zinc-300 hover:bg-white/5 hover:text-white'}`}
+                          className={`w-full text-left rounded px-3 py-2 text-sm transition ${formData.type === 'NO_DEPOSIT' ? 'bg-orange-500/10 text-orange-400' : 'text-zinc-300 hover:bg-white/5 hover:text-white'}`}
                         >
                           NO_DEPOSIT
                         </button>
@@ -562,7 +562,7 @@ export default function AdminOffersPage() {
                     required
                     value={formData.amount}
                     onChange={(e) => setFormData({ ...formData, amount: Number(e.target.value) })}
-                    className="w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-xl text-sm text-white focus:outline-none"
+                    className="w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded text-sm text-white focus:outline-none"
                   />
                 </div>
                 <div>
@@ -571,7 +571,7 @@ export default function AdminOffersPage() {
                     type="date"
                     value={formData.validUntil}
                     onChange={(e) => setFormData({ ...formData, validUntil: e.target.value })}
-                    className="w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-xl text-sm text-white focus:outline-none"
+                    className="w-full px-4 py-2 bg-zinc-900 border border-zinc-800 rounded text-sm text-white focus:outline-none"
                   />
                 </div>
               </div>
@@ -593,13 +593,13 @@ export default function AdminOffersPage() {
                 <button
                   type="button"
                   onClick={() => setShowModal(false)}
-                  className="px-5 py-2.5 rounded-xl border border-zinc-800 text-zinc-400 hover:text-white text-sm font-semibold"
+                  className="px-5 py-2.5 rounded border border-zinc-800 text-zinc-400 hover:text-white text-sm font-semibold"
                 >
                   Hủy
                 </button>
                 <button
                   type="submit"
-                  className="px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-bold transition shadow-lg shadow-orange-500/20 text-sm"
+                  className="px-5 py-2.5 rounded bg-orange-500 hover:bg-orange-600 text-white font-bold transition shadow-lg shadow-orange-500/20 text-sm"
                 >
                   Lưu
                 </button>

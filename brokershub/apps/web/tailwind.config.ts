@@ -96,6 +96,22 @@ const config: Config = {
         "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
         "title-md": ["20px", { lineHeight: "28px", fontWeight: "600" }],
       },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-15px)' },
+        },
+        pulseGlow: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.6' },
+        }
+      },
+      animation: {
+        float: 'float 4s ease-in-out infinite',
+        'float-delayed': 'float 4s ease-in-out 2s infinite',
+        'float-slow': 'float 5s ease-in-out 1s infinite',
+        'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

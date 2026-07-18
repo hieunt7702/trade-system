@@ -107,7 +107,7 @@ export default function CMSNewsPage() {
                 setSearchQuery(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full rounded-xl border border-white/10 bg-white/[0.04] pl-10 pr-4 py-2.5 text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-orange-400/40 focus:border-orange-400/50 transition"
+              className="w-full rounded border border-white/10 bg-white/[0.04] pl-10 pr-4 py-2.5 text-sm text-white placeholder:text-zinc-500 focus:outline-none focus:ring-2 focus:ring-orange-400/40 focus:border-orange-400/50 transition"
             />
           </div>
         </section>
@@ -116,7 +116,7 @@ export default function CMSNewsPage() {
         {featuredArticle && (
           <section className="border-b border-white/5">
             <div className="max-w-7xl mx-auto px-4 lg:px-8 py-10 lg:py-12">
-              <Link href={`/cms/${featuredArticle.slug}`} className="group grid lg:grid-cols-2 gap-0 rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] overflow-hidden hover:border-orange-400/40 hover:shadow-2xl hover:shadow-orange-500/10 transition">
+              <Link href={`/cms/${featuredArticle.slug}`} className="group grid lg:grid-cols-2 gap-0 rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] overflow-hidden hover:border-orange-400/40 hover:shadow-2xl hover:shadow-orange-500/10 transition">
 
                 <div className="relative aspect-video lg:aspect-auto lg:min-h-[320px] overflow-hidden bg-gradient-to-br from-blue-500/25 to-indigo-500/5">
                   <img src={featuredArticle.cover} alt={featuredArticle.title} className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
@@ -159,7 +159,7 @@ export default function CMSNewsPage() {
             </h2>
 
             {paginatedArticles.length === 0 ? (
-              <div className="text-center py-16 border border-dashed border-white/10 rounded-2xl bg-white/[0.01]">
+              <div className="text-center py-16 border border-dashed border-white/10 rounded bg-white/[0.01]">
                 <span className="text-4xl">📰</span>
                 <h3 className="mt-3 text-lg font-bold text-white">Chưa tìm thấy bài viết nào</h3>
                 <p className="text-sm text-zinc-500 mt-1">Vui lòng chọn bộ lọc khác.</p>
@@ -170,7 +170,7 @@ export default function CMSNewsPage() {
                   <Link
                     key={art.slug}
                     href={`/cms/${art.slug}`}
-                    className="group flex flex-col rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] overflow-hidden hover:border-orange-400/40 hover:shadow-lg hover:shadow-orange-500/10 transition h-full"
+                    className="group flex flex-col rounded border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] overflow-hidden hover:border-orange-400/40 hover:shadow-lg hover:shadow-orange-500/10 transition h-full"
                   >
                     <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-blue-500/25 to-indigo-500/5 border-b border-white/5 shrink-0">
                       <img src={art.cover} alt={art.title} className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
@@ -209,14 +209,14 @@ export default function CMSNewsPage() {
             {totalPages > 1 && (
               <div className="mt-10 flex justify-center">
                 <nav className="flex justify-center" role="navigation" aria-label="Pagination Navigation">
-                  <ul className="inline-flex items-center gap-1 rounded-2xl border border-white/10 bg-white/[0.03] p-1.5">
+                  <ul className="inline-flex items-center gap-1 rounded border border-white/10 bg-white/[0.03] p-1.5">
 
                     <li>
                       <button
                         type="button"
                         onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                         disabled={currentPage === 1}
-                        className={`inline-flex items-center justify-center min-w-9 h-9 px-3 rounded-lg text-sm font-bold transition ${currentPage === 1
+                        className={`inline-flex items-center justify-center min-w-9 h-9 px-3 rounded text-sm font-bold transition ${currentPage === 1
                             ? "text-zinc-600 cursor-not-allowed"
                             : "text-zinc-300 hover:bg-orange-500/10 hover:text-orange-300"
                           }`}
@@ -233,7 +233,7 @@ export default function CMSNewsPage() {
                           <button
                             type="button"
                             onClick={() => setCurrentPage(pageNum)}
-                            className={`inline-flex items-center justify-center min-w-9 h-9 px-3 rounded-lg text-sm font-bold transition tabular-nums ${isActive
+                            className={`inline-flex items-center justify-center min-w-9 h-9 px-3 rounded text-sm font-bold transition tabular-nums ${isActive
                                 ? "bg-gradient-to-r from-orange-400 to-amber-600 text-zinc-950 shadow-md shadow-orange-500/25"
                                 : "text-zinc-300 hover:bg-orange-500/10 hover:text-orange-300"
                               }`}
@@ -249,7 +249,7 @@ export default function CMSNewsPage() {
                         type="button"
                         onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                         disabled={currentPage === totalPages}
-                        className={`inline-flex items-center justify-center min-w-9 h-9 px-3 rounded-lg text-sm font-bold transition ${currentPage === totalPages
+                        className={`inline-flex items-center justify-center min-w-9 h-9 px-3 rounded text-sm font-bold transition ${currentPage === totalPages
                             ? "text-zinc-600 cursor-not-allowed"
                             : "text-zinc-300 hover:bg-orange-500/10 hover:text-orange-300"
                           }`}
@@ -269,7 +269,7 @@ export default function CMSNewsPage() {
         {/* Action conversion CTA panel */}
         <section>
           <div className="max-w-7xl mx-auto px-4 lg:px-8 py-12">
-            <div className="rounded-3xl border border-orange-400/30 bg-gradient-to-br from-orange-500/15 via-amber-500/5 to-transparent p-8 md:p-10 text-center relative overflow-hidden">
+            <div className="rounded border border-orange-400/30 bg-gradient-to-br from-orange-500/15 via-amber-500/5 to-transparent p-8 md:p-10 text-center relative overflow-hidden">
               <div className="absolute -top-32 -right-32 w-[400px] h-[400px] bg-orange-500/20 rounded-full blur-[100px] pointer-events-none"></div>
               <div className="relative">
                 <h3 className="text-2xl md:text-3xl font-extrabold text-white">
@@ -278,10 +278,10 @@ export default function CMSNewsPage() {
                 </h3>
                 <p className="mt-2 text-zinc-400 max-w-xl mx-auto">Áp dụng kiến thức vừa đọc — so sánh sàn forex và chọn broker với cơ chế IB tốt nhất.</p>
                 <div className="mt-6 flex flex-wrap justify-center gap-3">
-                  <Link href="/brokers" className="rounded-xl bg-gradient-to-r from-orange-400 to-amber-600 px-6 py-3 font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-xl shadow-orange-500/30">
+                  <Link href="/brokers" className="rounded bg-gradient-to-r from-orange-400 to-amber-600 px-6 py-3 font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-xl shadow-orange-500/30">
                     Xem tất cả broker
                   </Link>
-                  <Link href="/brokers/so-sanh" className="rounded-xl border border-white/10 bg-white/5 px-6 py-3 font-semibold text-white hover:border-white/20 transition">
+                  <Link href="/brokers/so-sanh" className="rounded border border-white/10 bg-white/5 px-6 py-3 font-semibold text-white hover:border-white/20 transition">
                     So sánh broker
                   </Link>
                 </div>

@@ -123,7 +123,7 @@ export default function CourseLessonPage() {
               <div className="lg:col-span-8">
 
                 {/* HTML5 video container */}
-                <div className="rounded-2xl border border-white/10 bg-zinc-950 overflow-hidden shadow-xl shadow-black/40">
+                <div className="rounded border border-white/10 bg-zinc-950 overflow-hidden shadow-xl shadow-black/40">
                   <div className="aspect-video relative bg-gradient-to-br from-zinc-900 via-zinc-950 to-black">
                     <video
                       key={activeLesson.slug}
@@ -140,7 +140,7 @@ export default function CourseLessonPage() {
                 </div>
 
                 {/* Lesson Description and Actions */}
-                <div className="mt-5 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-5 md:p-6">
+                <div className="mt-5 rounded border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-5 md:p-6">
                   <div className="flex items-center gap-2 flex-wrap text-xs mb-3">
                     <span className="rounded-full bg-orange-400/15 border border-orange-400/30 text-orange-300 px-2.5 py-0.5 font-bold">
                       Bài {activeLessonIndex + 1} / {courseSyllabus.lessons.length}
@@ -157,14 +157,14 @@ export default function CourseLessonPage() {
                       <button
                         type="button"
                         onClick={handleNextLesson}
-                        className="ml-auto inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-orange-400 to-amber-600 px-5 py-2.5 text-sm font-extrabold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-md shadow-orange-500/25 cursor-pointer"
+                        className="ml-auto inline-flex items-center gap-1.5 rounded bg-gradient-to-r from-orange-400 to-amber-600 px-5 py-2.5 text-sm font-extrabold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-md shadow-orange-500/25 cursor-pointer"
                       >
                         Tiếp tục bài tiếp theo →
                       </button>
                     ) : (
                       <Link
                         href={`/courses/${courseSyllabus.slug}`}
-                        className="ml-auto inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-emerald-400 to-teal-500 px-5 py-2.5 text-sm font-extrabold text-zinc-950 hover:from-emerald-300 hover:to-teal-500 transition shadow-md"
+                        className="ml-auto inline-flex items-center gap-1.5 rounded bg-gradient-to-r from-emerald-400 to-teal-500 px-5 py-2.5 text-sm font-extrabold text-zinc-950 hover:from-emerald-300 hover:to-teal-500 transition shadow-md"
                       >
                         Hoàn thành khoá học! 🎓
                       </Link>
@@ -175,7 +175,7 @@ export default function CourseLessonPage() {
 
               {/* Right Column Sticky Sidebar */}
               <aside className="lg:col-span-4" aria-label="Các bài trong khoá">
-                <div className="sticky top-24 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] overflow-hidden">
+                <div className="sticky top-24 rounded border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] overflow-hidden">
 
                   {/* Progress Header */}
                   <div className="px-5 py-4 border-b border-white/5 bg-gradient-to-r from-orange-500/8 to-transparent">

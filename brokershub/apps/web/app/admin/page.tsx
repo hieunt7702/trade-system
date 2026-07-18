@@ -54,7 +54,7 @@ export default function AdminDashboardPage() {
   return (
     <div className="space-y-8 animate-fadeIn">
       {/* Welcome Hero */}
-      <div className="relative overflow-hidden rounded-2xl border border-orange-500/20 bg-gradient-to-r from-orange-500/10 via-amber-500/5 to-zinc-950 p-6 md:p-8">
+      <div className="relative overflow-hidden rounded border border-orange-500/20 bg-gradient-to-r from-orange-500/10 via-amber-500/5 to-zinc-950 p-6 md:p-8">
         <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-orange-500/20 blur-3xl"></div>
         <div className="relative z-10 max-w-2xl">
           <h1 className="text-2xl md:text-3xl font-extrabold text-white tracking-tight">
@@ -121,11 +121,11 @@ export default function AdminDashboardPage() {
           <Link
             key={idx}
             href={item.link}
-            className={`group relative overflow-hidden rounded-2xl border bg-gradient-to-b ${item.color} p-6 shadow-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl flex flex-col justify-between min-h-[140px]`}
+            className={`group relative overflow-hidden rounded border bg-gradient-to-b ${item.color} p-6 shadow-xl transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl flex flex-col justify-between min-h-[140px]`}
           >
             <div className="flex items-center justify-between">
               <span className="text-zinc-400 text-sm font-semibold tracking-wide">{item.name}</span>
-              <div className="p-2 rounded-xl bg-zinc-950/50 border border-white/5">{item.icon}</div>
+              <div className="p-2 rounded bg-zinc-950/50 border border-white/5">{item.icon}</div>
             </div>
             <div className="mt-4 flex items-baseline justify-between">
               <span className={`text-4xl font-extrabold tracking-tight text-white ${item.textColor}`}>
@@ -149,7 +149,7 @@ export default function AdminDashboardPage() {
       {/* Grid: Activity Log & Quick actions */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Activity Logs */}
-        <div className="lg:col-span-2 bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl space-y-4">
+        <div className="lg:col-span-2 bg-zinc-900 border border-zinc-800 rounded p-6 shadow-xl space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-bold text-white flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -187,7 +187,7 @@ export default function AdminDashboardPage() {
             ].map((log, idx) => (
               <div
                 key={idx}
-                className="flex items-start justify-between gap-3 p-3.5 rounded-xl border border-zinc-800/80 bg-zinc-950/40 hover:bg-zinc-950/80 transition"
+                className="flex items-start justify-between gap-3 p-3.5 rounded border border-zinc-800/80 bg-zinc-950/40 hover:bg-zinc-950/80 transition"
               >
                 <div className="flex gap-3">
                   <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase border tracking-wider h-fit ${log.color}`}>
@@ -202,25 +202,25 @@ export default function AdminDashboardPage() {
         </div>
 
         {/* Quick Links */}
-        <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+        <div className="bg-zinc-900 border border-zinc-800 rounded p-6 shadow-xl flex flex-col justify-between">
           <div>
             <h2 className="text-lg font-bold text-white mb-4">Lối tắt nhanh</h2>
             <div className="space-y-2">
               <Link
                 href="/admin/brokers"
-                className="flex items-center gap-3 p-3 rounded-xl bg-zinc-950/60 border border-zinc-800/50 text-zinc-300 hover:text-white hover:border-orange-500/30 hover:bg-orange-500/[0.03] transition group text-sm font-semibold"
+                className="flex items-center gap-3 p-3 rounded bg-zinc-950/60 border border-zinc-800/50 text-zinc-300 hover:text-white hover:border-orange-500/30 hover:bg-orange-500/[0.03] transition group text-sm font-semibold"
               >
                 <span>➕ Thêm sàn giao dịch mới</span>
               </Link>
               <Link
                 href="/admin/offers"
-                className="flex items-center gap-3 p-3 rounded-xl bg-zinc-950/60 border border-zinc-800/50 text-zinc-300 hover:text-white hover:border-amber-500/30 hover:bg-amber-500/[0.03] transition group text-sm font-semibold"
+                className="flex items-center gap-3 p-3 rounded bg-zinc-950/60 border border-zinc-800/50 text-zinc-300 hover:text-white hover:border-amber-500/30 hover:bg-amber-500/[0.03] transition group text-sm font-semibold"
               >
                 <span>🏷️ Đăng khuyến mãi mới</span>
               </Link>
               <Link
                 href="/admin/indicators"
-                className="flex items-center gap-3 p-3 rounded-xl bg-zinc-950/60 border border-zinc-800/50 text-zinc-300 hover:text-white hover:border-emerald-500/30 hover:bg-emerald-500/[0.03] transition group text-sm font-semibold"
+                className="flex items-center gap-3 p-3 rounded bg-zinc-950/60 border border-zinc-800/50 text-zinc-300 hover:text-white hover:border-emerald-500/30 hover:bg-emerald-500/[0.03] transition group text-sm font-semibold"
               >
                 <span>📈 Tải lên chỉ báo kỹ thuật</span>
               </Link>

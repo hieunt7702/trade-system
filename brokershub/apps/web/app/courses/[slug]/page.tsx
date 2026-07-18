@@ -108,7 +108,7 @@ export default async function CourseDetailPage({ params }: { params: any }) {
               <div className="lg:col-span-7">
 
                 {/* Course Banner Image Box */}
-                <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-orange-500/10 to-zinc-900 aspect-video shadow-xl shadow-black/30 mb-6">
+                <div className="relative rounded overflow-hidden border border-white/10 bg-gradient-to-br from-orange-500/10 to-zinc-900 aspect-video shadow-xl shadow-black/30 mb-6">
                   <img src={course.cover} alt={course.title} className="w-full h-full object-cover" loading="eager" />
                   <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-950/10 to-transparent"></div>
 
@@ -144,7 +144,7 @@ export default async function CourseDetailPage({ params }: { params: any }) {
 
                 {/* Stats Panel */}
                 <div className="mt-5 grid grid-cols-3 gap-3">
-                  <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4">
+                  <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-base">📚</span>
                       <span className="text-[10px] text-zinc-500 uppercase tracking-wider font-bold">Bài học</span>
@@ -154,14 +154,14 @@ export default async function CourseDetailPage({ params }: { params: any }) {
                       <div className="text-[10px] text-emerald-300 mt-0.5">{course.previewsCount} preview</div>
                     )}
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4">
+                  <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-base">⏱️</span>
                       <span className="text-[10px] text-zinc-500 uppercase tracking-wider font-bold">Thời lượng</span>
                     </div>
                     <div className="font-extrabold text-amber-300 text-base">{course.duration}</div>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4">
+                  <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-4">
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-base">🧠</span>
                       <span className="text-[10px] text-zinc-500 uppercase tracking-wider font-bold">Trình độ</span>
@@ -171,7 +171,7 @@ export default async function CourseDetailPage({ params }: { params: any }) {
                 </div>
 
                 {/* Author Card */}
-                <div className="mt-5 flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3">
+                <div className="mt-5 flex items-center gap-3 rounded border border-white/10 bg-white/[0.03] px-4 py-3">
                   <div className="h-10 w-10 rounded-full bg-gradient-to-br from-orange-400 to-amber-600 flex items-center justify-center text-zinc-950 font-extrabold text-sm shrink-0">
                     BR
                   </div>
@@ -184,7 +184,7 @@ export default async function CourseDetailPage({ params }: { params: any }) {
 
               {/* Right Column Sticky Call to Action */}
               <div className="lg:col-span-5">
-                <div className="sticky top-24 rounded-2xl border border-orange-400/30 bg-gradient-to-b from-orange-500/15 via-amber-500/5 to-transparent p-5 md:p-6 shadow-2xl shadow-orange-500/10">
+                <div className="sticky top-24 rounded border border-orange-400/30 bg-gradient-to-b from-orange-500/15 via-amber-500/5 to-transparent p-5 md:p-6 shadow-2xl shadow-orange-500/10">
                   <div className="mb-4">
                     <div className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-2.5 py-0.5 text-[10px] uppercase tracking-[0.12em] text-emerald-300 font-bold mb-2">
                       <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -197,7 +197,7 @@ export default async function CourseDetailPage({ params }: { params: any }) {
                   </div>
 
                   <div className="space-y-2">
-                    <Link href={`/courses/${course.slug}`} className="block w-full rounded-xl bg-gradient-to-r from-orange-400 to-amber-600 px-6 py-4 text-center font-extrabold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-xl shadow-orange-500/30 text-base">
+                    <Link href={`/courses/${course.slug}`} className="block w-full rounded bg-gradient-to-r from-orange-400 to-amber-600 px-6 py-4 text-center font-extrabold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-xl shadow-orange-500/30 text-base">
                       ▶ Vào học
                     </Link>
                   </div>
@@ -233,9 +233,9 @@ export default async function CourseDetailPage({ params }: { params: any }) {
                 const isHeading = benefit.startsWith("**") && benefit.endsWith("**");
                 const cleanText = benefit.replace(/\*\*/g, "");
                 return (
-                  <div key={idx} className={`flex items-start gap-3 rounded-xl border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-4 ${isHeading ? "md:col-span-2 border-orange-500/20 bg-orange-500/[0.02]" : ""}`}>
+                  <div key={idx} className={`flex items-start gap-3 rounded border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-4 ${isHeading ? "md:col-span-2 border-orange-500/20 bg-orange-500/[0.02]" : ""}`}>
                     {!isHeading && (
-                      <span className="inline-flex items-center justify-center h-7 w-7 rounded-lg bg-emerald-500/15 border border-emerald-400/30 shrink-0 mt-0.5">
+                      <span className="inline-flex items-center justify-center h-7 w-7 rounded bg-emerald-500/15 border border-emerald-400/30 shrink-0 mt-0.5">
                         <svg className="h-4 w-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" /></svg>
                       </span>
                     )}
@@ -263,7 +263,7 @@ export default async function CourseDetailPage({ params }: { params: any }) {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.03] to-white/[0.01] overflow-hidden divide-y divide-white/5">
+            <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.03] to-white/[0.01] overflow-hidden divide-y divide-white/5">
               {course.lessons.map((lesson: any) => (
                 <div key={lesson.id} className="flex items-center gap-4 px-4 md:px-6 py-4 transition group hover:bg-orange-500/5">
                   <div className="font-mono text-xs font-bold text-zinc-500 tabular-nums w-8 shrink-0">{lesson.id}</div>
@@ -287,7 +287,7 @@ export default async function CourseDetailPage({ params }: { params: any }) {
         {/* Dynamic bottom call to action banner */}
         <section>
           <div className="max-w-4xl mx-auto px-4 lg:px-8 py-12">
-            <div className="rounded-3xl border border-orange-400/30 bg-gradient-to-br from-orange-500/15 via-amber-500/5 to-transparent p-8 md:p-12 text-center relative overflow-hidden">
+            <div className="rounded border border-orange-400/30 bg-gradient-to-br from-orange-500/15 via-amber-500/5 to-transparent p-8 md:p-12 text-center relative overflow-hidden">
               <div className="absolute -top-32 -right-32 w-[400px] h-[400px] bg-orange-500/20 rounded-full blur-[100px] pointer-events-none"></div>
               <div className="relative">
                 <h3 className="text-2xl md:text-3xl font-extrabold text-white mb-3">
@@ -295,7 +295,7 @@ export default async function CourseDetailPage({ params }: { params: any }) {
                   <span className="bg-gradient-to-r from-orange-300 to-amber-500 bg-clip-text text-transparent">{course.title}</span>?
                 </h3>
                 <p className="text-zinc-400 mb-6 max-w-xl mx-auto">Truy cập trọn đời, học mọi lúc, có chứng chỉ hoàn thành.</p>
-                <Link href={`/courses/${course.slug}`} className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-orange-400 to-amber-600 px-8 py-4 font-extrabold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-xl shadow-orange-500/30 text-base">
+                <Link href={`/courses/${course.slug}`} className="inline-flex items-center gap-2 rounded bg-gradient-to-r from-orange-400 to-amber-600 px-8 py-4 font-extrabold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-xl shadow-orange-500/30 text-base">
                   ▶ Bắt đầu học miễn phí →
                 </Link>
               </div>

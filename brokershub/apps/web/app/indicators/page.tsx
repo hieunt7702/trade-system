@@ -156,25 +156,25 @@ export default async function IndicatorsPage({ searchParams }: { searchParams?: 
             {/* Custom Platform Dropdown */}
             <div className="ml-auto relative">
               <details className="relative group text-left" data-hh-nav-dropdown="">
-                <summary className="list-none cursor-pointer inline-flex items-center justify-between gap-2 rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-200 outline-none hover:border-orange-500/30 hover:bg-white/[0.08] transition-all min-w-[180px] select-none shadow-lg shadow-black/10">
+                <summary className="list-none cursor-pointer inline-flex items-center justify-between gap-2 rounded border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-200 outline-none hover:border-orange-500/30 hover:bg-white/[0.08] transition-all min-w-[180px] select-none shadow-lg shadow-black/10">
                   <span className="font-semibold text-zinc-100">{currentPlatformLabel}</span>
                   <svg className="h-4 w-4 text-zinc-400 transition group-open:rotate-180" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg>
                 </summary>
                 <div className="absolute right-0 top-full pt-2 z-50 min-w-[180px]">
-                  <div className="rounded-2xl border border-white/10 bg-zinc-900/95 backdrop-blur-md shadow-2xl p-1.5 flex flex-col gap-1">
-                    <Link href="/indicators" className={`rounded-xl px-3.5 py-2.5 text-xs font-semibold transition text-left ${!currentPlatform ? 'bg-orange-500/20 text-orange-300 font-bold' : 'text-zinc-400 hover:bg-white/5 hover:text-white'}`}>
+                  <div className="rounded border border-white/10 bg-zinc-900/95 backdrop-blur-md shadow-2xl p-1.5 flex flex-col gap-1">
+                    <Link href="/indicators" className={`rounded px-3.5 py-2.5 text-xs font-semibold transition text-left ${!currentPlatform ? 'bg-orange-500/20 text-orange-300 font-bold' : 'text-zinc-400 hover:bg-white/5 hover:text-white'}`}>
                       Tất cả nền tảng
                     </Link>
-                    <Link href="/indicators?platform=mt4" className={`rounded-xl px-3.5 py-2.5 text-xs font-semibold transition text-left ${currentPlatform === 'mt4' ? 'bg-orange-500/20 text-orange-300 font-bold' : 'text-zinc-400 hover:bg-white/5 hover:text-white'}`}>
+                    <Link href="/indicators?platform=mt4" className={`rounded px-3.5 py-2.5 text-xs font-semibold transition text-left ${currentPlatform === 'mt4' ? 'bg-orange-500/20 text-orange-300 font-bold' : 'text-zinc-400 hover:bg-white/5 hover:text-white'}`}>
                       MetaTrader 4
                     </Link>
-                    <Link href="/indicators?platform=mt5" className={`rounded-xl px-3.5 py-2.5 text-xs font-semibold transition text-left ${currentPlatform === 'mt5' ? 'bg-orange-500/20 text-orange-300 font-bold' : 'text-zinc-400 hover:bg-white/5 hover:text-white'}`}>
+                    <Link href="/indicators?platform=mt5" className={`rounded px-3.5 py-2.5 text-xs font-semibold transition text-left ${currentPlatform === 'mt5' ? 'bg-orange-500/20 text-orange-300 font-bold' : 'text-zinc-400 hover:bg-white/5 hover:text-white'}`}>
                       MetaTrader 5
                     </Link>
-                    <Link href="/indicators?platform=tradingview" className={`rounded-xl px-3.5 py-2.5 text-xs font-semibold transition text-left ${currentPlatform === 'tradingview' ? 'bg-orange-500/20 text-orange-300 font-bold' : 'text-zinc-400 hover:bg-white/5 hover:text-white'}`}>
+                    <Link href="/indicators?platform=tradingview" className={`rounded px-3.5 py-2.5 text-xs font-semibold transition text-left ${currentPlatform === 'tradingview' ? 'bg-orange-500/20 text-orange-300 font-bold' : 'text-zinc-400 hover:bg-white/5 hover:text-white'}`}>
                       TradingView
                     </Link>
-                    <Link href="/indicators?platform=ctrader" className={`rounded-xl px-3.5 py-2.5 text-xs font-semibold transition text-left ${currentPlatform === 'ctrader' ? 'bg-orange-500/20 text-orange-300 font-bold' : 'text-zinc-400 hover:bg-white/5 hover:text-white'}`}>
+                    <Link href="/indicators?platform=ctrader" className={`rounded px-3.5 py-2.5 text-xs font-semibold transition text-left ${currentPlatform === 'ctrader' ? 'bg-orange-500/20 text-orange-300 font-bold' : 'text-zinc-400 hover:bg-white/5 hover:text-white'}`}>
                       cTrader
                     </Link>
                   </div>
@@ -190,7 +190,7 @@ export default async function IndicatorsPage({ searchParams }: { searchParams?: 
                 <Link
                   key={index}
                   href={`/indicators/${ind.slug}`}
-                  className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-5 transition hover:border-orange-400/40 hover:shadow-lg hover:shadow-orange-500/10 flex flex-col justify-between"
+                  className="group relative overflow-hidden rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-5 transition hover:border-orange-400/40 hover:shadow-lg hover:shadow-orange-500/10 flex flex-col justify-between"
                 >
                   <div>
                     {/* Badge */}
@@ -199,7 +199,7 @@ export default async function IndicatorsPage({ searchParams }: { searchParams?: 
                     </div>
 
                     {/* Graphic Box */}
-                    <div className="mb-4 flex h-32 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/15 via-indigo-500/10 to-zinc-900 border border-white/5 overflow-hidden">
+                    <div className="mb-4 flex h-32 items-center justify-center rounded bg-gradient-to-br from-blue-500/15 via-indigo-500/10 to-zinc-900 border border-white/5 overflow-hidden">
                       <svg className="h-16 w-16 text-blue-400/60 transition group-hover:scale-105 duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 13l4-4 4 4 4-7 6 11" />
                       </svg>
@@ -242,7 +242,7 @@ export default async function IndicatorsPage({ searchParams }: { searchParams?: 
           </section>
 
           {/* Incoming section */}
-          <section className="mt-12 mb-16 rounded-2xl border border-orange-400/30 bg-gradient-to-br from-orange-500/10 via-amber-500/5 to-transparent p-8 md:p-10">
+          <section className="mt-12 mb-16 rounded border border-orange-400/30 bg-gradient-to-br from-orange-500/10 via-amber-500/5 to-transparent p-8 md:p-10">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-orange-400/40 bg-orange-400/10 px-3 py-1 text-xs font-bold text-orange-300 mb-3">

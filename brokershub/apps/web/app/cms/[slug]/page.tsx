@@ -46,7 +46,7 @@ function CMSArticleRender({ article, allArticles }: { article: Article; allArtic
           </nav>
 
           {/* Hero Article Card */}
-          <article className="rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] overflow-hidden p-6 lg:p-10 mb-8 relative">
+          <article className="rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] overflow-hidden p-6 lg:p-10 mb-8 relative">
             <div className="absolute inset-0 bg-gradient-to-b from-orange-500/5 via-transparent to-transparent pointer-events-none"></div>
 
             <div className="relative z-10">
@@ -86,7 +86,7 @@ function CMSArticleRender({ article, allArticles }: { article: Article; allArtic
             </div>
 
             {/* Cover image */}
-            <div className="mt-8 rounded-2xl overflow-hidden aspect-video max-h-[480px] bg-gradient-to-br from-zinc-800 to-zinc-900 border border-white/5 relative">
+            <div className="mt-8 rounded overflow-hidden aspect-video max-h-[480px] bg-gradient-to-br from-zinc-800 to-zinc-900 border border-white/5 relative">
               <img
                 src={article.cover}
                 alt={article.title}
@@ -102,7 +102,7 @@ function CMSArticleRender({ article, allArticles }: { article: Article; allArtic
             {/* Desktop TOC Sidebar */}
             {article.toc && article.toc.length > 0 && (
               <aside className="lg:col-span-4 sticky top-24 hidden lg:block order-last lg:order-first">
-                <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-6">
+                <div className="rounded border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01] p-6">
                   <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4 text-orange-300">
                     Mục lục nội dung
                   </h3>
@@ -129,7 +129,7 @@ function CMSArticleRender({ article, allArticles }: { article: Article; allArtic
 
               {/* Mobile TOC Accordion */}
               {article.toc && article.toc.length > 0 && (
-                <div className="lg:hidden rounded-2xl border border-white/10 bg-white/[0.03] overflow-hidden">
+                <div className="lg:hidden rounded border border-white/10 bg-white/[0.03] overflow-hidden">
                   <details className="group">
                     <summary className="flex items-center justify-between p-4 cursor-pointer hover:bg-white/[0.02] transition">
                       <div className="flex flex-col">
@@ -159,7 +159,7 @@ function CMSArticleRender({ article, allArticles }: { article: Article; allArtic
               )}
 
               {/* Rich Body Content */}
-              <article className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-6 md:p-8">
+              <article className="rounded border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] p-6 md:p-8">
                 <div
                   className="prose prose-invert max-w-none prose-orange leading-relaxed space-y-6 text-zinc-300"
                   dangerouslySetInnerHTML={{ __html: article.contentHtml || "" }}
@@ -167,7 +167,7 @@ function CMSArticleRender({ article, allArticles }: { article: Article; allArtic
               </article>
 
               {/* Action conversions CTA block */}
-              <div className="rounded-2xl border border-orange-400/30 bg-gradient-to-br from-orange-500/15 via-amber-500/5 to-transparent p-8 text-center relative overflow-hidden">
+              <div className="rounded border border-orange-400/30 bg-gradient-to-br from-orange-500/15 via-amber-500/5 to-transparent p-8 text-center relative overflow-hidden">
                 <div className="absolute -top-24 -right-24 w-[300px] h-[300px] bg-orange-500/10 rounded-full blur-[80px] pointer-events-none"></div>
                 <div className="relative">
                   <h3 className="text-xl md:text-2xl font-extrabold text-white">
@@ -178,10 +178,10 @@ function CMSArticleRender({ article, allArticles }: { article: Article; allArtic
                     So sánh broker, xem cơ chế IB và tìm đối tác giao dịch phù hợp nhất.
                   </p>
                   <div className="mt-6 flex flex-wrap justify-center gap-3">
-                    <Link href="/brokers" className="rounded-xl bg-gradient-to-r from-orange-400 to-amber-600 px-5 py-2.5 text-sm font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-lg">
+                    <Link href="/brokers" className="rounded bg-gradient-to-r from-orange-400 to-amber-600 px-5 py-2.5 text-sm font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-lg">
                       So sánh Broker
                     </Link>
-                    <Link href="/cms" className="rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white hover:border-white/20 transition">
+                    <Link href="/cms" className="rounded border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white hover:border-white/20 transition">
                       Xem thêm bài viết
                     </Link>
                   </div>
@@ -199,7 +199,7 @@ function CMSArticleRender({ article, allArticles }: { article: Article; allArtic
                       <Link
                         key={art.slug}
                         href={`/cms/${art.slug}`}
-                        className="group flex flex-col rounded-xl border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] overflow-hidden hover:border-orange-400/40 hover:shadow-md transition h-full"
+                        className="group flex flex-col rounded border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] overflow-hidden hover:border-orange-400/40 hover:shadow-md transition h-full"
                       >
                         <div className="relative aspect-video overflow-hidden border-b border-white/5">
                           <img src={art.cover} alt={art.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
@@ -224,7 +224,7 @@ function CMSArticleRender({ article, allArticles }: { article: Article; allArtic
 
               {/* Return link */}
               <div className="pt-4 border-t border-white/5 flex justify-center">
-                <Link href="/cms" className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-zinc-300 hover:border-orange-400/40 hover:text-orange-300 hover:bg-orange-500/5 transition">
+                <Link href="/cms" className="inline-flex items-center gap-2 rounded border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-zinc-300 hover:border-orange-400/40 hover:text-orange-300 hover:bg-orange-500/5 transition">
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                   </svg>

@@ -376,7 +376,7 @@ export default function GoldPricesPage() {
                   <button
                     type="button"
                     onClick={handleRefresh}
-                    className={`ml-auto rounded-lg border border-white/10 bg-white/5 p-2 text-zinc-400 hover:border-amber-400/40 hover:text-amber-300 transition ${isRefreshing ? "animate-spin text-amber-400" : ""}`}
+                    className={`ml-auto rounded border border-white/10 bg-white/5 p-2 text-zinc-400 hover:border-amber-400/40 hover:text-amber-300 transition ${isRefreshing ? "animate-spin text-amber-400" : ""}`}
                     aria-label="Làm mới"
                   >
                     <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -398,11 +398,11 @@ export default function GoldPricesPage() {
                 </div>
 
                 <div className="mt-6 grid grid-cols-3 gap-3">
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-center">
+                  <div className="rounded border border-white/10 bg-white/[0.03] p-4 text-center">
                     <span className="text-[10px] text-zinc-500 uppercase tracking-wider font-bold">Bán</span>
                     <span className="block mt-1 font-bold text-white text-sm tabular-nums">{selectedItem.sell_label}</span>
                   </div>
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-center">
+                  <div className="rounded border border-white/10 bg-white/[0.03] p-4 text-center">
                     <span className="text-[10px] text-zinc-500 uppercase tracking-wider font-bold">Chênh lệch</span>
                     <span className="block mt-1 font-bold text-white text-sm tabular-nums">{selectedItem.spread_label}</span>
                   </div>
@@ -410,7 +410,7 @@ export default function GoldPricesPage() {
               </div>
 
               {/* Right Column: Dynamic SVG Chart */}
-              <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] via-white/[0.02] to-transparent p-5 lg:p-6 backdrop-blur">
+              <div className="rounded border border-white/10 bg-gradient-to-br from-white/[0.06] via-white/[0.02] to-transparent p-5 lg:p-6 backdrop-blur">
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <div className="text-[10px] uppercase tracking-wider text-amber-300/80 font-bold mb-1">📈 Lịch sử gần đây</div>
@@ -423,7 +423,7 @@ export default function GoldPricesPage() {
                         type="button"
                         role="tab"
                         onClick={() => setTimePeriod(days)}
-                        className={`rounded-md px-2.5 py-1 text-[11px] font-bold transition ${timePeriod === days ? "bg-amber-500 text-zinc-950" : "text-zinc-400 hover:text-amber-300"
+                        className={`rounded px-2.5 py-1 text-[11px] font-bold transition ${timePeriod === days ? "bg-amber-500 text-zinc-950" : "text-zinc-400 hover:text-amber-300"
                           }`}
                       >
                         {days}D
@@ -500,7 +500,7 @@ export default function GoldPricesPage() {
           <section>
             <h2 className="text-xs uppercase tracking-[0.15em] text-zinc-500 font-bold mb-4">📊 Tổng quan thị trường</h2>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-              <div className="rounded-2xl border border-emerald-400/20 bg-gradient-to-br from-emerald-500/10 to-emerald-500/[0.02] p-5">
+              <div className="rounded border border-emerald-400/20 bg-gradient-to-br from-emerald-500/10 to-emerald-500/[0.02] p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <svg className="h-4 w-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -510,7 +510,7 @@ export default function GoldPricesPage() {
                 <div className="text-xl md:text-2xl font-extrabold text-emerald-200 tabular-nums">{stats.highLabel}</div>
               </div>
 
-              <div className="rounded-2xl border border-rose-400/20 bg-gradient-to-br from-rose-500/10 to-rose-500/[0.02] p-5">
+              <div className="rounded border border-rose-400/20 bg-gradient-to-br from-rose-500/10 to-rose-500/[0.02] p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <svg className="h-4 w-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 17h8m0 0v-8m0 8l-8-8-4 4-6-6" />
@@ -520,7 +520,7 @@ export default function GoldPricesPage() {
                 <div className="text-xl md:text-2xl font-extrabold text-rose-200 tabular-nums">{stats.lowLabel}</div>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-5">
+              <div className="rounded border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-5">
                 <div className="flex items-center gap-2 mb-2">
                   <svg className="h-4 w-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 13l4-4L17 19M21 5l-4 4" />
@@ -530,7 +530,7 @@ export default function GoldPricesPage() {
                 <div className="text-xl md:text-2xl font-extrabold text-white tabular-nums">{stats.volatility}</div>
               </div>
 
-              <div className={`rounded-2xl border p-5 ${stats.changeDirection >= 0 ? "border-emerald-400/20 bg-gradient-to-br from-emerald-500/10 to-emerald-500/[0.02]" : "border-rose-400/20 bg-gradient-to-br from-rose-500/10 to-rose-500/[0.02]"}`}>
+              <div className={`rounded border p-5 ${stats.changeDirection >= 0 ? "border-emerald-400/20 bg-gradient-to-br from-emerald-500/10 to-emerald-500/[0.02]" : "border-rose-400/20 bg-gradient-to-br from-rose-500/10 to-rose-500/[0.02]"}`}>
                 <div className="flex items-center gap-2 mb-2">
                   <svg className="h-4 w-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -562,7 +562,7 @@ export default function GoldPricesPage() {
                   <div
                     key={index}
                     onClick={() => setSelectedType(gold.type)}
-                    className={`group cursor-pointer rounded-2xl border p-5 relative overflow-hidden transition-all duration-200 hover:border-amber-400/40 hover:shadow-xl hover:shadow-orange-500/10 ${isActive
+                    className={`group cursor-pointer rounded border p-5 relative overflow-hidden transition-all duration-200 hover:border-amber-400/40 hover:shadow-xl hover:shadow-orange-500/10 ${isActive
                         ? "border-amber-400/50 bg-gradient-to-br from-amber-500/15 via-amber-500/5 to-transparent shadow-lg shadow-amber-500/20"
                         : "border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.01]"
                       }`}
@@ -597,10 +597,10 @@ export default function GoldPricesPage() {
           </section>
 
           {/* History Collapsible Table */}
-          <details className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] group overflow-hidden">
+          <details className="rounded border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.01] group overflow-hidden">
             <summary className="flex items-center justify-between gap-3 cursor-pointer list-none px-6 py-5 hover:bg-white/[0.03] transition select-none">
               <div className="flex items-center gap-3">
-                <span className="h-10 w-10 rounded-xl bg-amber-500/15 border border-amber-400/30 flex items-center justify-center text-lg">📅</span>
+                <span className="h-10 w-10 rounded bg-amber-500/15 border border-amber-400/30 flex items-center justify-center text-lg">📅</span>
                 <div>
                   <div className="font-semibold text-white">Bảng lịch sử</div>
                   <div className="text-xs text-zinc-500">Mở để xem dữ liệu lịch sử chi tiết</div>
@@ -648,77 +648,77 @@ export default function GoldPricesPage() {
 
             <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {/* VT Markets Card */}
-              <article className="group relative overflow-hidden rounded-2xl border border-orange-400/30 bg-gradient-to-b from-orange-500/10 to-amber-500/[0.02] hover:border-orange-400/60 hover:shadow-2xl hover:shadow-orange-500/20 p-6 transition">
+              <article className="group relative overflow-hidden rounded border border-orange-400/30 bg-gradient-to-b from-orange-500/10 to-amber-500/[0.02] hover:border-orange-400/60 hover:shadow-2xl hover:shadow-orange-500/20 p-6 transition">
                 <div className="absolute top-3 right-3 rounded-full bg-gradient-to-r from-orange-400 to-amber-500 text-zinc-950 px-2.5 py-1 text-[10px] font-bold">TOP</div>
                 <div className="flex items-center gap-4 mb-4">
-                  <img src="https://hieunthub.co/uploads/brokers/logos/vt-markets-logo-v3.png" alt="VT Markets" className="h-14 w-14 rounded-xl object-cover" loading="lazy" decoding="async" />
+                  <img src="https://hieunthub.co/uploads/brokers/logos/vt-markets-logo-v3.png" alt="VT Markets" className="h-14 w-14 rounded object-cover" loading="lazy" decoding="async" />
                   <div className="flex-1 min-w-0">
                     <h3 className="font-extrabold text-lg text-white group-hover:text-orange-300 transition truncate">VT Markets</h3>
                     <div className="text-xs text-amber-400 mt-0.5">★ 4.8/5</div>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-2 text-xs mb-5">
-                  <div className="rounded-lg bg-white/5 border border-white/10 px-3 py-2.5">
+                  <div className="rounded bg-white/5 border border-white/10 px-3 py-2.5">
                     <div className="text-[10px] uppercase tracking-wider text-zinc-500 mb-0.5">Spread XAU/USD</div>
                     <div className="font-bold text-white tabular-nums">15-20</div>
                   </div>
-                  <div className="rounded-lg bg-emerald-500/10 border border-emerald-400/20 px-3 py-2.5">
+                  <div className="rounded bg-emerald-500/10 border border-emerald-400/20 px-3 py-2.5">
                     <div className="text-[10px] uppercase tracking-wider text-emerald-300 mb-0.5">Rebate</div>
                     <div className="font-bold text-emerald-200 tabular-nums">12</div>
                   </div>
                 </div>
-                <Link className="flex items-center justify-center gap-2 w-full rounded-xl bg-gradient-to-r from-orange-400 to-amber-600 px-4 py-3 text-sm font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-lg shadow-orange-500/20" href="/brokers/danh-gia-vt-markets">
+                <Link className="flex items-center justify-center gap-2 w-full rounded bg-gradient-to-r from-orange-400 to-amber-600 px-4 py-3 text-sm font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-lg shadow-orange-500/20" href="/brokers/danh-gia-vt-markets">
                   Xem chi tiết
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </Link>
               </article>
 
               {/* ETO Markets Card */}
-              <article className="group relative overflow-hidden rounded-2xl border border-orange-400/30 bg-gradient-to-b from-orange-500/10 to-amber-500/[0.02] hover:border-orange-400/60 hover:shadow-2xl hover:shadow-orange-500/20 p-6 transition">
+              <article className="group relative overflow-hidden rounded border border-orange-400/30 bg-gradient-to-b from-orange-500/10 to-amber-500/[0.02] hover:border-orange-400/60 hover:shadow-2xl hover:shadow-orange-500/20 p-6 transition">
                 <div className="absolute top-3 right-3 rounded-full bg-gradient-to-r from-orange-400 to-amber-500 text-zinc-950 px-2.5 py-1 text-[10px] font-bold">TOP</div>
                 <div className="flex items-center gap-4 mb-4">
-                  <img src="https://hieunthub.co/uploads/brokers/logos/01KJ4T0M44H5R139ZV71CV1W24.webp" alt="ETO Markets" className="h-14 w-14 rounded-xl object-cover" loading="lazy" decoding="async" />
+                  <img src="https://hieunthub.co/uploads/brokers/logos/01KJ4T0M44H5R139ZV71CV1W24.webp" alt="ETO Markets" className="h-14 w-14 rounded object-cover" loading="lazy" decoding="async" />
                   <div className="flex-1 min-w-0">
                     <h3 className="font-extrabold text-lg text-white group-hover:text-orange-300 transition truncate">ETO Markets</h3>
                     <div className="text-xs text-amber-400 mt-0.5">★ 4.2/5</div>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-2 text-xs mb-5">
-                  <div className="rounded-lg bg-white/5 border border-white/10 px-3 py-2.5">
+                  <div className="rounded bg-white/5 border border-white/10 px-3 py-2.5">
                     <div className="text-[10px] uppercase tracking-wider text-zinc-500 mb-0.5">Spread XAU/USD</div>
                     <div className="font-bold text-white tabular-nums">27-52</div>
                   </div>
-                  <div className="rounded-lg bg-emerald-500/10 border border-emerald-400/20 px-3 py-2.5">
+                  <div className="rounded bg-emerald-500/10 border border-emerald-400/20 px-3 py-2.5">
                     <div className="text-[10px] uppercase tracking-wider text-emerald-300 mb-0.5">Rebate</div>
                     <div className="font-bold text-emerald-200 tabular-nums">$13-$37</div>
                   </div>
                 </div>
-                <Link className="flex items-center justify-center gap-2 w-full rounded-xl bg-gradient-to-r from-orange-400 to-amber-600 px-4 py-3 text-sm font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-lg shadow-orange-500/20" href="/brokers/danh-gia-eto-markets">
+                <Link className="flex items-center justify-center gap-2 w-full rounded bg-gradient-to-r from-orange-400 to-amber-600 px-4 py-3 text-sm font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-lg shadow-orange-500/20" href="/brokers/danh-gia-eto-markets">
                   Xem chi tiết
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </Link>
               </article>
 
               {/* XM Card */}
-              <article className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] hover:border-orange-400/40 hover:shadow-lg hover:shadow-orange-500/10 p-6 transition">
+              <article className="group relative overflow-hidden rounded border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] hover:border-orange-400/40 hover:shadow-lg hover:shadow-orange-500/10 p-6 transition">
                 <div className="flex items-center gap-4 mb-4">
-                  <img src="https://hieunthub.co/uploads/brokers/logos/01KJ48JWVDN98XB13Z5EW066SX.webp" alt="XM" className="h-14 w-14 rounded-xl object-cover" loading="lazy" decoding="async" />
+                  <img src="https://hieunthub.co/uploads/brokers/logos/01KJ48JWVDN98XB13Z5EW066SX.webp" alt="XM" className="h-14 w-14 rounded object-cover" loading="lazy" decoding="async" />
                   <div className="flex-1 min-w-0">
                     <h3 className="font-extrabold text-lg text-white group-hover:text-orange-300 transition truncate">XM</h3>
                     <div className="text-xs text-amber-400 mt-0.5">★ 4.7/5</div>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-2 text-xs mb-5">
-                  <div className="rounded-lg bg-white/5 border border-white/10 px-3 py-2.5">
+                  <div className="rounded bg-white/5 border border-white/10 px-3 py-2.5">
                     <div className="text-[10px] uppercase tracking-wider text-zinc-500 mb-0.5">Spread XAU/USD</div>
                     <div className="font-bold text-white tabular-nums">40-45</div>
                   </div>
-                  <div className="rounded-lg bg-emerald-500/10 border border-emerald-400/20 px-3 py-2.5">
+                  <div className="rounded bg-emerald-500/10 border border-emerald-400/20 px-3 py-2.5">
                     <div className="text-[10px] uppercase tracking-wider text-emerald-300 mb-0.5">Rebate</div>
                     <div className="font-bold text-emerald-200 tabular-nums">$17</div>
                   </div>
                 </div>
-                <Link className="flex items-center justify-center gap-2 w-full rounded-xl bg-gradient-to-r from-orange-400 to-amber-600 px-4 py-3 text-sm font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-lg shadow-orange-500/20" href="/brokers/danh-gia-xm">
+                <Link className="flex items-center justify-center gap-2 w-full rounded bg-gradient-to-r from-orange-400 to-amber-600 px-4 py-3 text-sm font-bold text-zinc-950 hover:from-orange-300 hover:to-amber-500 transition shadow-lg shadow-orange-500/20" href="/brokers/danh-gia-xm">
                   Xem chi tiết
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 </Link>

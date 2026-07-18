@@ -47,13 +47,13 @@ export default function AdminLoginPage() {
         </div>
 
         {error && (
-          <div className="mb-6 p-4 bg-rose-500/10 border border-rose-500/20 rounded-xl flex items-start gap-3">
+          <div className="mb-6 p-4 bg-rose-500/10 border border-rose-500/20 rounded flex items-start gap-3">
             <svg className="w-5 h-5 text-rose-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
             <p className="text-sm font-medium text-rose-400">{error}</p>
           </div>
         )}
 
-        <div className="bg-zinc-900/50 backdrop-blur-xl border border-zinc-800/80 rounded-3xl p-8 shadow-2xl">
+        <div className="bg-zinc-900/50 backdrop-blur-xl border border-zinc-800/80 rounded p-8 shadow-2xl">
           <form onSubmit={handleLogin} className="space-y-5">
             <div>
               <label className="block text-xs font-bold text-zinc-400 mb-2 uppercase tracking-wide">
@@ -70,7 +70,7 @@ export default function AdminLoginPage() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-11 pr-4 py-3 bg-zinc-950/50 border border-zinc-800 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/50 transition-all"
+                  className="w-full pl-11 pr-4 py-3 bg-zinc-950/50 border border-zinc-800 rounded text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/50 transition-all"
                   placeholder="admin@gmail.com"
                 />
               </div>
@@ -96,7 +96,7 @@ export default function AdminLoginPage() {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-11 pr-4 py-3 bg-zinc-950/50 border border-zinc-800 rounded-xl text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/50 transition-all"
+                  className="w-full pl-11 pr-4 py-3 bg-zinc-950/50 border border-zinc-800 rounded text-sm text-white placeholder-zinc-600 focus:outline-none focus:border-orange-500/50 focus:ring-1 focus:ring-orange-500/50 transition-all"
                   placeholder="••••••••"
                 />
               </div>
@@ -105,7 +105,7 @@ export default function AdminLoginPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full py-3.5 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 text-zinc-950 font-bold rounded-xl transition-all shadow-lg shadow-orange-500/20 text-sm disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2 mt-4"
+              className="w-full py-3.5 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-400 hover:to-amber-500 text-zinc-950 font-bold rounded transition-all shadow-lg shadow-orange-500/20 text-sm disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center gap-2 mt-4"
             >
               {isLoading ? (
                 <>
