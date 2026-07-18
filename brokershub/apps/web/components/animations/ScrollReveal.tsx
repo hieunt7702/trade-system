@@ -28,7 +28,7 @@ export function ScrollReveal({
   const isInView = useInView(ref, { once: true, amount });
 
   const getVariants = (): Variants => {
-    const baseTransition = { duration, ease: [0.25, 0.1, 0.25, 1] };
+    const baseTransition = { duration, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] };
     
     switch (animation) {
       case "fade-up":
@@ -117,7 +117,7 @@ export function ScrollReveal({
 // Helper to wrap list items when using staggerChildren on parent
 export function ScrollRevealItem({ children, className = "", animation = "fade-up", duration = 0.5 }: Omit<ScrollRevealProps, "delay" | "amount" | "staggerChildren">) {
   const getVariants = (): Variants => {
-    const baseTransition = { duration, ease: [0.25, 0.1, 0.25, 1] };
+    const baseTransition = { duration, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] };
     switch (animation) {
       case "fade-up": return { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: baseTransition } };
       case "fade-left": return { hidden: { opacity: 0, x: 30 }, visible: { opacity: 1, x: 0, transition: baseTransition } };
